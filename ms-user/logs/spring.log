@@ -1,0 +1,351 @@
+2022-11-06 02:07:47 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 25500 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 02:07:47 - The following 2 profiles are active: "db", "logger"
+2022-11-06 02:07:48 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 02:07:48 - Starting service [Tomcat]
+2022-11-06 02:07:48 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 02:07:48 - Initializing Spring embedded WebApplicationContext
+2022-11-06 02:07:48 - Root WebApplicationContext: initialization completed in 864 ms
+2022-11-06 02:07:48 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 02:07:48 - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 02:07:48 - Started MsUserApplication in 1.678 seconds (JVM running for 2.241)
+2022-11-06 02:07:49 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 02:07:49 - Initializing Servlet 'dispatcherServlet'
+2022-11-06 02:07:49 - Completed initialization in 1 ms
+2022-11-06 02:10:35 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 18772 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 02:10:35 - The following 2 profiles are active: "db", "logger"
+2022-11-06 02:10:36 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 02:10:36 - Starting service [Tomcat]
+2022-11-06 02:10:36 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 02:10:36 - Initializing Spring embedded WebApplicationContext
+2022-11-06 02:10:36 - Root WebApplicationContext: initialization completed in 840 ms
+2022-11-06 02:10:37 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 02:10:37 - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 02:10:37 - Started MsUserApplication in 1.652 seconds (JVM running for 2.137)
+2022-11-06 02:10:37 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 02:10:37 - Initializing Servlet 'dispatcherServlet'
+2022-11-06 02:10:37 - Completed initialization in 1 ms
+2022-11-06 02:41:59 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 18824 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 02:41:59 - The following 2 profiles are active: "db", "logger"
+2022-11-06 02:42:00 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 02:42:00 - Starting service [Tomcat]
+2022-11-06 02:42:00 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 02:42:00 - Initializing Spring embedded WebApplicationContext
+2022-11-06 02:42:00 - Root WebApplicationContext: initialization completed in 746 ms
+2022-11-06 02:42:00 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.encom.msuser.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-11-06 02:42:00 - Stopping service [Tomcat]
+2022-11-06 02:42:00 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 02:42:00 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.encom.msuser.service.UserService required a bean of type 'com.encom.msuser.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.encom.msuser.repository.UserRepository' in your configuration.
+
+2022-11-06 02:44:19 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 24832 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 02:44:19 - The following 2 profiles are active: "db", "logger"
+2022-11-06 02:44:20 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 02:44:20 - Starting service [Tomcat]
+2022-11-06 02:44:20 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 02:44:20 - Initializing Spring embedded WebApplicationContext
+2022-11-06 02:44:20 - Root WebApplicationContext: initialization completed in 717 ms
+2022-11-06 02:44:20 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.encom.msuser.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-11-06 02:44:20 - Stopping service [Tomcat]
+2022-11-06 02:44:20 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 02:44:20 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.encom.msuser.service.UserService required a bean of type 'com.encom.msuser.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.encom.msuser.repository.UserRepository' in your configuration.
+
+2022-11-06 02:45:59 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 26448 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 02:45:59 - The following 2 profiles are active: "db", "logger"
+2022-11-06 02:46:00 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 02:46:00 - Starting service [Tomcat]
+2022-11-06 02:46:00 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 02:46:00 - Initializing Spring embedded WebApplicationContext
+2022-11-06 02:46:00 - Root WebApplicationContext: initialization completed in 713 ms
+2022-11-06 02:46:00 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.encom.msuser.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-11-06 02:46:00 - Stopping service [Tomcat]
+2022-11-06 02:46:00 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 02:46:00 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.encom.msuser.service.UserService required a bean of type 'com.encom.msuser.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.encom.msuser.repository.UserRepository' in your configuration.
+
+2022-11-06 02:47:08 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 1624 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 02:47:08 - The following 2 profiles are active: "db", "logger"
+2022-11-06 02:47:09 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 02:47:09 - Starting service [Tomcat]
+2022-11-06 02:47:09 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 02:47:09 - Initializing Spring embedded WebApplicationContext
+2022-11-06 02:47:09 - Root WebApplicationContext: initialization completed in 710 ms
+2022-11-06 02:47:09 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.encom.msuser.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-11-06 02:47:09 - Stopping service [Tomcat]
+2022-11-06 02:47:09 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 02:47:09 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.encom.msuser.service.UserService required a bean of type 'com.encom.msuser.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.encom.msuser.repository.UserRepository' in your configuration.
+
+2022-11-06 02:47:26 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 17696 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 02:47:26 - The following 2 profiles are active: "db", "logger"
+2022-11-06 02:47:26 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 02:47:26 - Starting service [Tomcat]
+2022-11-06 02:47:26 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 02:47:26 - Initializing Spring embedded WebApplicationContext
+2022-11-06 02:47:26 - Root WebApplicationContext: initialization completed in 684 ms
+2022-11-06 02:47:27 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.encom.msuser.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-11-06 02:47:27 - Stopping service [Tomcat]
+2022-11-06 02:47:27 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 02:47:27 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.encom.msuser.service.UserService required a bean of type 'com.encom.msuser.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.encom.msuser.repository.UserRepository' in your configuration.
+
+2022-11-06 02:48:57 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 17808 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 02:48:57 - The following 2 profiles are active: "db", "logger"
+2022-11-06 02:48:58 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 02:48:58 - Starting service [Tomcat]
+2022-11-06 02:48:58 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 02:48:58 - Initializing Spring embedded WebApplicationContext
+2022-11-06 02:48:58 - Root WebApplicationContext: initialization completed in 695 ms
+2022-11-06 02:48:58 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.encom.msuser.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-11-06 02:48:58 - Stopping service [Tomcat]
+2022-11-06 02:48:58 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 02:48:58 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.encom.msuser.service.UserService required a bean of type 'com.encom.msuser.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.encom.msuser.repository.UserRepository' in your configuration.
+
+2022-11-06 03:02:01 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 25388 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 03:02:01 - The following 2 profiles are active: "db", "logger"
+2022-11-06 03:02:01 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 03:02:01 - Starting service [Tomcat]
+2022-11-06 03:02:01 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 03:02:01 - Initializing Spring embedded WebApplicationContext
+2022-11-06 03:02:01 - Root WebApplicationContext: initialization completed in 755 ms
+2022-11-06 03:02:01 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.encom.msuser.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-11-06 03:02:01 - Stopping service [Tomcat]
+2022-11-06 03:02:01 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 03:02:01 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.encom.msuser.service.UserService required a bean of type 'com.encom.msuser.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.encom.msuser.repository.UserRepository' in your configuration.
+
+2022-11-06 03:03:48 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 22048 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 03:03:48 - The following 2 profiles are active: "db", "logger"
+2022-11-06 03:03:48 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 03:03:48 - Starting service [Tomcat]
+2022-11-06 03:03:48 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 03:03:48 - Initializing Spring embedded WebApplicationContext
+2022-11-06 03:03:48 - Root WebApplicationContext: initialization completed in 685 ms
+2022-11-06 03:03:49 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 03:03:49 - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 03:03:49 - Started MsUserApplication in 1.417 seconds (JVM running for 1.857)
+2022-11-06 03:03:49 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 03:03:49 - Initializing Servlet 'dispatcherServlet'
+2022-11-06 03:03:49 - Completed initialization in 0 ms
+2022-11-06 03:07:23 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.encom.msuser.service.UserService.getAllUsersCount(UserService.java:21)
+	at com.encom.msuser.controller.UserController.getAllUsersCount(UserController.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-11-06 03:13:06 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 21860 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 03:13:06 - The following 2 profiles are active: "db", "logger"
+2022-11-06 03:13:07 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 03:13:07 - Starting service [Tomcat]
+2022-11-06 03:13:07 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 03:13:07 - Initializing Spring embedded WebApplicationContext
+2022-11-06 03:13:07 - Root WebApplicationContext: initialization completed in 738 ms
+2022-11-06 03:13:08 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 03:13:08 - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 03:13:08 - Started MsUserApplication in 1.402 seconds (JVM running for 1.851)
+2022-11-06 03:13:08 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 03:13:08 - Initializing Servlet 'dispatcherServlet'
+2022-11-06 03:13:08 - Completed initialization in 0 ms
+2022-11-06 03:14:41 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 25944 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 03:14:41 - The following 2 profiles are active: "db", "logger"
+2022-11-06 03:14:42 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 03:14:42 - Starting service [Tomcat]
+2022-11-06 03:14:42 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 03:14:42 - Initializing Spring embedded WebApplicationContext
+2022-11-06 03:14:42 - Root WebApplicationContext: initialization completed in 674 ms
+2022-11-06 03:14:42 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 03:14:42 - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 03:14:42 - Started MsUserApplication in 1.316 seconds (JVM running for 1.772)
+2022-11-06 03:14:43 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 03:14:43 - Initializing Servlet 'dispatcherServlet'
+2022-11-06 03:14:43 - Completed initialization in 0 ms
+2022-11-06 03:15:19 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 5060 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 03:15:19 - The following 2 profiles are active: "db", "logger"
+2022-11-06 03:15:19 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 03:15:19 - Starting service [Tomcat]
+2022-11-06 03:15:19 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 03:15:20 - Initializing Spring embedded WebApplicationContext
+2022-11-06 03:15:20 - Root WebApplicationContext: initialization completed in 656 ms
+2022-11-06 03:15:20 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 03:15:20 - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 03:15:20 - Started MsUserApplication in 1.331 seconds (JVM running for 1.768)
+2022-11-06 03:15:20 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 03:15:20 - Initializing Servlet 'dispatcherServlet'
+2022-11-06 03:15:20 - Completed initialization in 0 ms
+2022-11-06 03:15:45 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 27008 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 03:15:45 - The following 2 profiles are active: "db", "logger"
+2022-11-06 03:15:45 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 03:15:45 - Starting service [Tomcat]
+2022-11-06 03:15:45 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 03:15:45 - Initializing Spring embedded WebApplicationContext
+2022-11-06 03:15:45 - Root WebApplicationContext: initialization completed in 675 ms
+2022-11-06 03:15:46 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 03:15:46 - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 03:15:46 - Started MsUserApplication in 1.322 seconds (JVM running for 1.83)
+2022-11-06 03:15:46 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 03:15:46 - Initializing Servlet 'dispatcherServlet'
+2022-11-06 03:15:46 - Completed initialization in 0 ms
+2022-11-06 03:15:53 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 15440 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo\ms-user)
+2022-11-06 03:15:53 - The following 2 profiles are active: "db", "logger"
+2022-11-06 03:15:54 - Tomcat initialized with port(s): 8080 (http)
+2022-11-06 03:15:54 - Starting service [Tomcat]
+2022-11-06 03:15:54 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-11-06 03:15:54 - Initializing Spring embedded WebApplicationContext
+2022-11-06 03:15:54 - Root WebApplicationContext: initialization completed in 690 ms
+2022-11-06 03:15:54 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 03:15:54 - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 03:15:54 - Started MsUserApplication in 1.333 seconds (JVM running for 1.77)
+2022-11-06 03:15:55 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 03:15:55 - Initializing Servlet 'dispatcherServlet'
+2022-11-06 03:15:55 - Completed initialization in 0 ms
