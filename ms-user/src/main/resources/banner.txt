@@ -1,0 +1,4 @@
+ +-+ +-+ +-+ +-+ +-+ +-+ +-+
+ |m| |s| |-| |u| |s| |e| |r|
+ +-+ +-+ +-+ +-+ +-+ +-+ +-+
+Powered by Spring Boot ${spring-boot.version} on java ${java.version}
