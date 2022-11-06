@@ -4,12 +4,18 @@ import com.encom.msuser.model.dto.UserDto;
 import com.encom.msuser.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(path = "/users")
@@ -25,11 +31,13 @@ public class UserController {
 
     @GetMapping("/count")
     public ResponseEntity<Long> getAllUsersCount() {
-        return userService.getAllUsersCount();
+
+//        return userService.getAllUsersCount();
+        return null;
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDto> getUserById(@PathVariable int eventCategoryID) {
+    public ResponseEntity<UserDto> getUserById(@PathVariable String eventCategoryID) {
 
         return null;
     }

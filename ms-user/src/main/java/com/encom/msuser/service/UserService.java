@@ -7,20 +7,20 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+@Service
 @RequiredArgsConstructor
 @Slf4j
-@Service
 public class UserService {
-    private UserRepository userRepository;
+//    private final UserRepository userRepository;
 
 //    public UserService(UserRepository userRepository) {
 //        this.userRepository = userRepository;
 //    }
 
-    public ResponseEntity<Long> getAllUsersCount() {
-        long count = userRepository.count();
-
-        return new ResponseEntity<Long>(count, HttpStatus.OK);
-
-    }
+//    public ResponseEntity<Long> getAllUsersCount() {
+//        long count = userRepository.count();
+//
+//        return new ResponseEntity<Long>(count, HttpStatus.OK);
+//
+//    }
 }

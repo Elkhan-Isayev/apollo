@@ -11,18 +11,16 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
 @Entity
+@Table(name="users")
 public class User {
     @Id
     @GeneratedValue(generator = "uuid2")
@@ -31,6 +29,7 @@ public class User {
     private String id;
     private String username;
     private String name;
+    private String fullfullName;
     private String surname;
     private String email;
     @Column(name = "created_at")
