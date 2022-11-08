@@ -29,7 +29,6 @@ public class User {
     private String id;
     private String username;
     private String name;
-    private String fullfullName;
     private String surname;
     private String email;
     @Column(name = "created_at")
@@ -40,7 +39,7 @@ public class User {
     @UpdateTimestamp
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime updatedAt;
-    @JsonIgnore
-    @Column(columnDefinition = "BOOLEAN")
-    private boolean deleted = false;
+//    @JsonIgnore
+//    @Column(columnDefinition = "BOOLEAN")
+//    private boolean deleted = false;
 }
