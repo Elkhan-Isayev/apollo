@@ -23,21 +23,21 @@ public class ExceptionHook extends DefaultErrorAttributes {
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<Map<String, Object>> handle(NotFoundException exception,
                                                       WebRequest request) {
-        log.trace("Data not found: {}", exception.getMessage());
+        log.info("Data not found: {}", exception.getMessage());
         return ofType(request, HttpStatus.NOT_FOUND, exception.getMessage());
     }
 
     @ExceptionHandler(BadRequestException.class)
     public ResponseEntity<Map<String, Object>> handle(BadRequestException exception,
                                                       WebRequest request) {
-        log.trace("Invalid request: {}", exception.getMessage());
+        log.info("Invalid request: {}", exception.getMessage());
         return ofType(request, HttpStatus.BAD_REQUEST, exception.getMessage());
     }
 
     @ExceptionHandler(TokenExpirationException.class)
     public ResponseEntity<Map<String, Object>> handle(TokenExpirationException exception,
                                                       WebRequest request) {
-        log.trace("Error validating access token: {}", exception.getMessage());
+        log.info("Error validating access token: {}", exception.getMessage());
         return ofType(request, HttpStatus.UNAUTHORIZED, exception.getMessage());
     }
 
@@ -45,7 +45,7 @@ public class ExceptionHook extends DefaultErrorAttributes {
     public ResponseEntity<Map<String, Object>> handleValidationExceptions(
             MethodArgumentNotValidException exception,
             WebRequest request) {
-        log.trace("Validation exception: {}", exception.getMessage());
+        log.info("Validation exception: {}", exception.getMessage());
         Map<String, String> errors = new HashMap<>();
         exception.getBindingResult().getAllErrors().forEach((error) -> {
             String fieldName = ((FieldError) error).getField();

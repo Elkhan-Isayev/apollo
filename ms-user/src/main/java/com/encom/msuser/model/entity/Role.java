@@ -1,7 +1,5 @@
 package com.encom.msuser.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,23 +12,20 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
 @Entity
-@Table(name="users")
-public class User {
+@Table(name="roles")
+public class Role {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(name = "id", columnDefinition = "VARCHAR(255)")
     private String id;
-    private String username;
     private String name;
-    private String surname;
-    private String email;
+    private String description;
     @Column(name = "created_at")
     @CreationTimestamp
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
@@ -39,7 +34,4 @@ public class User {
     @UpdateTimestamp
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime updatedAt;
-//    @JsonIgnore
-//    @Column(columnDefinition = "BOOLEAN")
-//    private boolean deleted = false;
 }
