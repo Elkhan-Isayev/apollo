@@ -15,9 +15,11 @@ spring:
       validation-query: 1
 
   jpa:
+    generate-ddl: true
     properties:
       javax:
         persistence:
+          create-database-schemas: true
           schema-generation:
             database:
               action: create

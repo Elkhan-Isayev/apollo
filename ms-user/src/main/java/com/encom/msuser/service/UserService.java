@@ -6,7 +6,6 @@ import com.encom.msuser.model.dto.UserDto;
 import com.encom.msuser.model.entity.User;
 import com.encom.msuser.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +16,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
 public class UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper = UserMapper.INSTANCE;
@@ -32,13 +30,13 @@ public class UserService {
 
         List<UserDto> userDtoList = userMapper.mapToUserDtoList(users);
 
-        return new ResponseEntity<List<UserDto>>(userDtoList, HttpStatus.OK);
+        return new ResponseEntity<>(userDtoList, HttpStatus.OK);
     }
 
     public ResponseEntity<Long> getAllUsersCount() {
         long count = userRepository.count();
 
-        return new ResponseEntity<Long>(count, HttpStatus.OK);
+        return new ResponseEntity<>(count, HttpStatus.OK);
     }
 
     public ResponseEntity<UserDto> getUserById(String id) {
@@ -49,7 +47,7 @@ public class UserService {
 
         UserDto userDto = userMapper.mapToUserDto(user);
 
-        return new ResponseEntity<UserDto>(userDto, HttpStatus.OK);
+        return new ResponseEntity<>(userDto, HttpStatus.OK);
     }
 
     public ResponseEntity<UserDto> createNewUser(UserDto userDto) {
@@ -59,7 +57,7 @@ public class UserService {
 
         UserDto createdUserDto = userMapper.mapToUserDto(createdUser);
 
-        return new ResponseEntity<UserDto>(createdUserDto, HttpStatus.CREATED);
+        return new ResponseEntity<>(createdUserDto, HttpStatus.CREATED);
     }
 
     public ResponseEntity<UserDto> updateUser(UserDto userDto) {
@@ -76,7 +74,7 @@ public class UserService {
 
         UserDto changedUserDto = userMapper.mapToUserDto(changedUser);
 
-        return new ResponseEntity<UserDto>(changedUserDto, HttpStatus.OK);
+        return new ResponseEntity<>(changedUserDto, HttpStatus.OK);
     }
 
     public ResponseEntity deleteUser(String id) {
