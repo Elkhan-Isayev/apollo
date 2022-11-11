@@ -1,6 +1,6 @@
 logging:
   file:
-    path: logs/msuser/
+    path: logs/msfaq/
   level:
     '[org.springframework.data]': TRACE
     '[org.hibernate]': TRACE
