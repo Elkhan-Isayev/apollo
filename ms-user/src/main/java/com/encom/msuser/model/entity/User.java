@@ -36,16 +36,12 @@ public class User {
 
     private String email;
 
-//    @OneToMany(mappedBy = "user")
-//    Set<UserGroup> userGroups;
-
     @ManyToMany
-    @JoinTable(name = "user_group")
-    @JsonIgnore
+    @JoinTable(
+            name = "user_group",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "group_id"))
     Set<Group> groups = new HashSet<>();
-
-//    @OneToMany(mappedBy = "user")
-//    Set<UserPrivilege> userPrivileges;
 
     @Column(name = "created_at")
     @CreationTimestamp

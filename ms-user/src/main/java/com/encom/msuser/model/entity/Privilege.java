@@ -35,11 +35,6 @@ public class Privilege {
 
     private String description;
 
-    @OneToMany(mappedBy = "privilege")
-    Set<GroupPrivilege> privilegeGroups;
-
-    @OneToMany(mappedBy = "privilege")
-    Set<UserPrivilege> privilegeUsers;
 
     @Column(name = "created_at")
     @CreationTimestamp

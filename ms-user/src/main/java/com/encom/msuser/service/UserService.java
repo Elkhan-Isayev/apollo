@@ -7,9 +7,7 @@ import com.encom.msuser.model.dto.GroupDto;
 import com.encom.msuser.model.dto.UserDto;
 import com.encom.msuser.model.entity.Group;
 import com.encom.msuser.model.entity.User;
-import com.encom.msuser.model.entity.UserGroup;
 import com.encom.msuser.repository.GroupRepository;
-import com.encom.msuser.repository.UserGroupRepository;
 import com.encom.msuser.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -19,8 +17,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -102,14 +98,14 @@ public class UserService {
         if (!userRepository.existsById(id)) {
             throw new NotFoundException(String.format("service.getUserGroups id = %s", id));
         }
-        List<Group> groups = new ArrayList<>();
 
-//        userRepository.findById(id).orElse(null)
-//                .getUserGroups()
-//                .stream()
-//                .forEach(userGroup -> groups.add(userGroup.getGroup()));
-//
-//        groupRepository.findGroups
+        List<Group> groups = new ArrayList<>();
+        userRepository
+                .findById(id)
+                .orElse(null)
+                .getGroups()
+                .stream()
+                .forEach(group -> groups.add(group));
 
         if (groups.isEmpty()) {
             throw new NotFoundException(String.format("service.getUserGroups id = %s, userGroups is empty", id));

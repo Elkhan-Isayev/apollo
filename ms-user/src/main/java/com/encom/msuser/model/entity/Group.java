@@ -32,15 +32,8 @@ public class Group {
 
     private String description;
 
-    @ManyToMany
-    @JsonIgnore
-    Set<User> users = new HashSet<>();
-
-//    @OneToMany(mappedBy = "group")
-//    Set<UserGroup> groupUsers;
-//
-//    @OneToMany(mappedBy = "group")
-//    Set<GroupPrivilege> groupPrivileges;
+    @ManyToMany(mappedBy = "groups")
+    Set<User> users;
 
     @Column(name = "created_at")
     @CreationTimestamp
