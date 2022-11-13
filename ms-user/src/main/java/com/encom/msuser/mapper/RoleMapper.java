@@ -1,7 +1,7 @@
 package com.encom.msuser.mapper;
 
-import com.encom.msuser.model.dto.RoleDto;
-import com.encom.msuser.model.entity.Role;
+import com.encom.msuser.model.dto.PrivilegeDto;
+import com.encom.msuser.model.entity.Privilege;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -11,9 +11,9 @@ import java.util.List;
 public abstract class RoleMapper {
     public static final RoleMapper INSTANCE = Mappers.getMapper(RoleMapper.class);
 
-    public abstract RoleDto mapToRoleDto(Role role);
+    public abstract PrivilegeDto mapToRoleDto(Privilege privilege);
 
-    public abstract List<RoleDto> mapToRoleDtoList(List<Role> Roles);
+    public abstract List<PrivilegeDto> mapToRoleDtoList(List<Privilege> privileges);
 
-    public abstract Role mapToRole(RoleDto RoleDto);
+    public abstract Privilege mapToRole(PrivilegeDto PrivilegeDto);
 }

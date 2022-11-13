@@ -1,0 +1,1190 @@
+2022-11-12 03:50:31 - Starting MsUserApplication using Java 11.0.15 on DESKTOP-O1BCQFG with PID 14348 (D:\Projects\apollo\ms-user\build\classes\java\main started by iselx in D:\Projects\apollo)
+2022-11-12 03:50:31 - The following 2 profiles are active: "db", "logger"
+2022-11-12 03:50:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 03:50:32 - Scanning for JPA repositories in packages com.encom.msuser.
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\MsUserApplication.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\MsUserApplication.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\GroupController.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\GroupController.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\RoleController.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\RoleController.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\UserController.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\controller\UserController.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\BadRequestException.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\BadRequestException.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\DestinationForbiddenException.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\DestinationForbiddenException.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\ExceptionHook.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\ExceptionHook.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\NotFoundException.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\NotFoundException.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\TokenExpirationException.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\exception\TokenExpirationException.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\GroupMapper.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\GroupMapper.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\GroupMapperImpl.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\GroupMapperImpl.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\RoleMapper.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\RoleMapper.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\RoleMapperImpl.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\RoleMapperImpl.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\UserMapper.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\UserMapper.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\UserMapperImpl.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\mapper\UserMapperImpl.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\GroupDto$GroupDtoBuilder.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\GroupDto$GroupDtoBuilder.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\GroupDto.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\GroupDto.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\PrivilegeDto$RoleDtoBuilder.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\PrivilegeDto$RoleDtoBuilder.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\PrivilegeDto.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\PrivilegeDto.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\UserDto$UserDtoBuilder.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\UserDto$UserDtoBuilder.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\UserDto.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\dto\UserDto.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\Group$GroupBuilder.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\Group$GroupBuilder.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\Group.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\Group.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\Role$RoleBuilder.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\Role$RoleBuilder.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\Role.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\Role.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\User$UserBuilder.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\User$UserBuilder.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\User.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\model\entity\User.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\repository\GroupRepository.class]
+2022-11-12 03:50:32 - Identified candidate component class: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\repository\GroupRepository.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\repository\RoleRepository.class]
+2022-11-12 03:50:32 - Identified candidate component class: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\repository\RoleRepository.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\repository\UserRepository.class]
+2022-11-12 03:50:32 - Identified candidate component class: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\repository\UserRepository.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\GroupService.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\GroupService.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\RoleService.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\RoleService.class]
+2022-11-12 03:50:32 - Scanning file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\UserService.class]
+2022-11-12 03:50:32 - Ignored because not matching any filter: file [D:\Projects\apollo\ms-user\build\classes\java\main\com\encom\msuser\service\UserService.class]
+2022-11-12 03:50:32 - Spring Data JPA - Registering repository: userRepository - Interface: com.encom.msuser.repository.UserRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
+2022-11-12 03:50:32 - Spring Data JPA - Registering repository: roleRepository - Interface: com.encom.msuser.repository.RoleRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
+2022-11-12 03:50:32 - Spring Data JPA - Registering repository: groupRepository - Interface: com.encom.msuser.repository.GroupRepository - Factory: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
+2022-11-12 03:50:32 - Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2022-11-12 03:50:32 - Tomcat initialized with port(s): 8080 (http)
+2022-11-12 03:50:32 - Starting service [Tomcat]
+2022-11-12 03:50:32 - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 03:50:32 - Initializing Spring embedded WebApplicationContext
+2022-11-12 03:50:32 - Root WebApplicationContext: initialization completed in 1232 ms
+2022-11-12 03:50:33 - PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: jdk.internal.loader.ClassLoaders$AppClassLoader@512ddf17
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (null)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/D:/Projects/apollo/ms-user/build/classes/java/main/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.encom.msuser.model.entity.Group
+		com.encom.msuser.model.entity.Privilege
+		com.encom.msuser.model.entity.User]
+	Mapping files names []
+	Properties []
+2022-11-12 03:50:33 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2022-11-12 03:50:33 - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2022-11-12 03:50:33 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jdbc] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jta] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JDBCTransactionFactory] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JTATransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.CMTTransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.hql.spi.id.MultiTableBulkIdStrategy] : [persistent] -> [org.hibernate.hql.spi.id.persistent.PersistentTableBulkIdStrategy]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.hql.spi.id.MultiTableBulkIdStrategy] : [global_temporary] -> [org.hibernate.hql.spi.id.global.GlobalTemporaryTableBulkIdStrategy]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.hql.spi.id.MultiTableBulkIdStrategy] : [local_temporary] -> [org.hibernate.hql.spi.id.local.LocalTemporaryTableBulkIdStrategy]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [default] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-hbm] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [component-path] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [default] -> [org.hibernate.cache.internal.DefaultCacheKeysFactory]
+2022-11-12 03:50:33 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [simple] -> [org.hibernate.cache.internal.SimpleCacheKeysFactory]
+2022-11-12 03:50:33 - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 03:50:33 - HHH000206: hibernate.properties not found
+2022-11-12 03:50:33 - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.engine.config.spi.ConfigurationService]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.cache.spi.RegionFactory]
+2022-11-12 03:50:33 - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2022-11-12 03:50:33 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2022-11-12 03:50:33 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 03:50:33 - Adding type registration boolean -> org.hibernate.type.BooleanType@4d0e1a9a
+2022-11-12 03:50:33 - Adding type registration boolean -> org.hibernate.type.BooleanType@4d0e1a9a
+2022-11-12 03:50:33 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4d0e1a9a
+2022-11-12 03:50:33 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6b3d9c38
+2022-11-12 03:50:33 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@59ec7020
+2022-11-12 03:50:33 - Adding type registration yes_no -> org.hibernate.type.YesNoType@70f4f89e
+2022-11-12 03:50:33 - Adding type registration byte -> org.hibernate.type.ByteType@77ccded4
+2022-11-12 03:50:33 - Adding type registration byte -> org.hibernate.type.ByteType@77ccded4
+2022-11-12 03:50:33 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@77ccded4
+2022-11-12 03:50:33 - Adding type registration character -> org.hibernate.type.CharacterType@6121a7dd
+2022-11-12 03:50:33 - Adding type registration char -> org.hibernate.type.CharacterType@6121a7dd
+2022-11-12 03:50:33 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@6121a7dd
+2022-11-12 03:50:33 - Adding type registration short -> org.hibernate.type.ShortType@566fe83c
+2022-11-12 03:50:33 - Adding type registration short -> org.hibernate.type.ShortType@566fe83c
+2022-11-12 03:50:33 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@566fe83c
+2022-11-12 03:50:33 - Adding type registration integer -> org.hibernate.type.IntegerType@5458c71e
+2022-11-12 03:50:33 - Adding type registration int -> org.hibernate.type.IntegerType@5458c71e
+2022-11-12 03:50:33 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@5458c71e
+2022-11-12 03:50:33 - Adding type registration long -> org.hibernate.type.LongType@38089dae
+2022-11-12 03:50:33 - Adding type registration long -> org.hibernate.type.LongType@38089dae
+2022-11-12 03:50:33 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@38089dae
+2022-11-12 03:50:33 - Adding type registration float -> org.hibernate.type.FloatType@64bba0eb
+2022-11-12 03:50:33 - Adding type registration float -> org.hibernate.type.FloatType@64bba0eb
+2022-11-12 03:50:33 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@64bba0eb
+2022-11-12 03:50:33 - Adding type registration double -> org.hibernate.type.DoubleType@729cd862
+2022-11-12 03:50:33 - Adding type registration double -> org.hibernate.type.DoubleType@729cd862
+2022-11-12 03:50:33 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@729cd862
+2022-11-12 03:50:33 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@100d0218
+2022-11-12 03:50:33 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@100d0218
+2022-11-12 03:50:33 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@61ab6521
+2022-11-12 03:50:33 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@61ab6521
+2022-11-12 03:50:33 - Adding type registration string -> org.hibernate.type.StringType@510da778
+2022-11-12 03:50:33 - Adding type registration java.lang.String -> org.hibernate.type.StringType@510da778
+2022-11-12 03:50:33 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@6546371
+2022-11-12 03:50:33 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@227a933d
+2022-11-12 03:50:33 - Adding type registration url -> org.hibernate.type.UrlType@49e7e8f1
+2022-11-12 03:50:33 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@49e7e8f1
+2022-11-12 03:50:33 - Adding type registration Duration -> org.hibernate.type.DurationType@334540a0
+2022-11-12 03:50:33 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@334540a0
+2022-11-12 03:50:33 - Adding type registration Instant -> org.hibernate.type.InstantType@3d8d970e
+2022-11-12 03:50:33 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@3d8d970e
+2022-11-12 03:50:33 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@72eed547
+2022-11-12 03:50:33 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@72eed547
+2022-11-12 03:50:33 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7c7ed72a
+2022-11-12 03:50:33 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7c7ed72a
+2022-11-12 03:50:33 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@d0b814d
+2022-11-12 03:50:33 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@d0b814d
+2022-11-12 03:50:33 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@1ac0cdb0
+2022-11-12 03:50:33 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@1ac0cdb0
+2022-11-12 03:50:33 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@74f4a2ba
+2022-11-12 03:50:33 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@74f4a2ba
+2022-11-12 03:50:33 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@18e4551
+2022-11-12 03:50:33 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@18e4551
+2022-11-12 03:50:33 - Adding type registration date -> org.hibernate.type.DateType@36df4c26
+2022-11-12 03:50:33 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@36df4c26
+2022-11-12 03:50:33 - Adding type registration time -> org.hibernate.type.TimeType@590013c7
+2022-11-12 03:50:33 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@590013c7
+2022-11-12 03:50:33 - Adding type registration timestamp -> org.hibernate.type.TimestampType@734fbae3
+2022-11-12 03:50:33 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@734fbae3
+2022-11-12 03:50:33 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@734fbae3
+2022-11-12 03:50:33 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@53e93fb7
+2022-11-12 03:50:33 - Adding type registration calendar -> org.hibernate.type.CalendarType@5409dfdd
+2022-11-12 03:50:33 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@5409dfdd
+2022-11-12 03:50:33 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@5409dfdd
+2022-11-12 03:50:33 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@2262f0d8
+2022-11-12 03:50:33 - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@3b8507df
+2022-11-12 03:50:33 - Adding type registration locale -> org.hibernate.type.LocaleType@7493d937
+2022-11-12 03:50:33 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@7493d937
+2022-11-12 03:50:33 - Adding type registration currency -> org.hibernate.type.CurrencyType@2475fba3
+2022-11-12 03:50:33 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@2475fba3
+2022-11-12 03:50:33 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@4e94669c
+2022-11-12 03:50:33 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4e94669c
+2022-11-12 03:50:33 - Adding type registration class -> org.hibernate.type.ClassType@2fb082ff
+2022-11-12 03:50:33 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@2fb082ff
+2022-11-12 03:50:33 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@15586843
+2022-11-12 03:50:33 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@15586843
+2022-11-12 03:50:33 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@6ef037e4
+2022-11-12 03:50:33 - Adding type registration binary -> org.hibernate.type.BinaryType@2084e65a
+2022-11-12 03:50:33 - Adding type registration byte[] -> org.hibernate.type.BinaryType@2084e65a
+2022-11-12 03:50:33 - Adding type registration [B -> org.hibernate.type.BinaryType@2084e65a
+2022-11-12 03:50:33 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@4586a8aa
+2022-11-12 03:50:33 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@4586a8aa
+2022-11-12 03:50:33 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@4586a8aa
+2022-11-12 03:50:33 - Adding type registration row_version -> org.hibernate.type.RowVersionType@26d40c77
+2022-11-12 03:50:33 - Adding type registration image -> org.hibernate.type.ImageType@14874a5d
+2022-11-12 03:50:33 - Adding type registration characters -> org.hibernate.type.CharArrayType@5d3f99d7
+2022-11-12 03:50:33 - Adding type registration char[] -> org.hibernate.type.CharArrayType@5d3f99d7
+2022-11-12 03:50:33 - Adding type registration [C -> org.hibernate.type.CharArrayType@5d3f99d7
+2022-11-12 03:50:33 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@4239262e
+2022-11-12 03:50:33 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@4239262e
+2022-11-12 03:50:33 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@4239262e
+2022-11-12 03:50:33 - Adding type registration text -> org.hibernate.type.TextType@352f6727
+2022-11-12 03:50:33 - Adding type registration ntext -> org.hibernate.type.NTextType@1805383
+2022-11-12 03:50:33 - Adding type registration blob -> org.hibernate.type.BlobType@ce561cc
+2022-11-12 03:50:33 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@ce561cc
+2022-11-12 03:50:33 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@3375b118
+2022-11-12 03:50:33 - Adding type registration clob -> org.hibernate.type.ClobType@37c2f0b4
+2022-11-12 03:50:33 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@37c2f0b4
+2022-11-12 03:50:33 - Adding type registration nclob -> org.hibernate.type.NClobType@6136e1fc
+2022-11-12 03:50:33 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6136e1fc
+2022-11-12 03:50:33 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@2565a7d0
+2022-11-12 03:50:33 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@7e77678c
+2022-11-12 03:50:33 - Adding type registration serializable -> org.hibernate.type.SerializableType@106cd9c8
+2022-11-12 03:50:33 - Adding type registration object -> org.hibernate.type.ObjectType@7534785a
+2022-11-12 03:50:33 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@7534785a
+2022-11-12 03:50:33 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@46ab4efc
+2022-11-12 03:50:33 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@2ff498b0
+2022-11-12 03:50:33 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@b5312df
+2022-11-12 03:50:33 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4300e240
+2022-11-12 03:50:33 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@5f409872
+2022-11-12 03:50:33 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@547aaa32
+2022-11-12 03:50:33 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@472c9f88
+2022-11-12 03:50:33 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@37a67cf
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.boot.cfgxml.spi.CfgXmlAccessService]
+2022-11-12 03:50:33 - Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1d6713dd] into BootstrapContext; was [null]
+2022-11-12 03:50:33 - ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1d6713dd) [was null]
+2022-11-12 03:50:33 - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@6ef1c3f7] into BootstrapContext; was [null]
+2022-11-12 03:50:33 - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@3386c206] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@1322b575]
+2022-11-12 03:50:33 - Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1d6713dd]
+2022-11-12 03:50:33 - ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1d6713dd]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.id.factory.spi.MutableIdentifierGeneratorFactory]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2022-11-12 03:50:33 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.engine.jdbc.dialect.spi.DialectFactory]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.engine.jdbc.dialect.spi.DialectResolver]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.engine.jndi.spi.JndiService]
+2022-11-12 03:50:33 - HikariUserCP - Starting...
+2022-11-12 03:50:33 - HikariUserCP - Start completed.
+2022-11-12 03:50:33 - Database ->
+       name : PostgreSQL
+    version : 15.0
+      major : 15
+      minor : 0
+2022-11-12 03:50:33 - Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.3.7
+      major : 42
+      minor : 3
+2022-11-12 03:50:33 - JDBC version : 4.2
+2022-11-12 03:50:33 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-11-12 03:50:33 - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+2022-11-12 03:50:33 - Normalizing identifier quoting [postgres]
+2022-11-12 03:50:33 - Normalizing identifier quoting [msuser]
+2022-11-12 03:50:33 - HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.resource.beans.spi.ManagedBeanRegistry]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.engine.jdbc.spi.JdbcServices]
+2022-11-12 03:50:33 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@34cf0e80
+2022-11-12 03:50:33 - Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@34cf0e80
+2022-11-12 03:50:33 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@15586843
+2022-11-12 03:50:33 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@6e981e78] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@498a4d62]
+2022-11-12 03:50:33 - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2022-11-12 03:50:33 - Binding entity from annotated class: com.encom.msuser.model.entity.Group
+2022-11-12 03:50:33 - Normalizing identifier quoting [DTYPE]
+2022-11-12 03:50:33 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2022-11-12 03:50:33 - Import with entity name Group
+2022-11-12 03:50:33 - Import: Group -> com.encom.msuser.model.entity.Group
+2022-11-12 03:50:33 - Import: com.encom.msuser.model.entity.Group -> com.encom.msuser.model.entity.Group
+2022-11-12 03:50:33 - Normalizing identifier quoting [groups]
+2022-11-12 03:50:33 - Normalizing identifier quoting [groups]
+2022-11-12 03:50:33 - Bind entity com.encom.msuser.model.entity.Group on table groups
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Group.id
+2022-11-12 03:50:33 - Normalizing identifier quoting [id]
+2022-11-12 03:50:33 - Normalizing identifier quoting [id]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(groups), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - Not known whether passed class name [com.encom.msuser.model.entity.Group] is safe
+2022-11-12 03:50:33 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.encom.msuser.model.entity.Group
+2022-11-12 03:50:33 - MetadataSourceProcessor property id with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Group:id]
+2022-11-12 03:50:33 - building SimpleValue for id
+2022-11-12 03:50:33 - Normalizing identifier quoting [id]
+2022-11-12 03:50:33 - Building property id
+2022-11-12 03:50:33 - Cascading id with null
+2022-11-12 03:50:33 - Add generic generator with name: uuid2
+2022-11-12 03:50:33 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, uuid2, ...)
+2022-11-12 03:50:33 - Bind @Id on id
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Group.createdAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [created_at]
+2022-11-12 03:50:33 - Normalizing identifier quoting [created_at]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(groups), mappingColumn=created_at, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property createdAt with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Group:createdAt]
+2022-11-12 03:50:33 - building SimpleValue for createdAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [created_at]
+2022-11-12 03:50:33 - Building property createdAt
+2022-11-12 03:50:33 - Cascading createdAt with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Group.description
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(groups), mappingColumn=description, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property description with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Group:description]
+2022-11-12 03:50:33 - building SimpleValue for description
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Building property description
+2022-11-12 03:50:33 - Cascading description with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Group.name
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(groups), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property name with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Group:name]
+2022-11-12 03:50:33 - building SimpleValue for name
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Building property name
+2022-11-12 03:50:33 - Cascading name with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Group.updatedAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [updated_at]
+2022-11-12 03:50:33 - Normalizing identifier quoting [updated_at]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(groups), mappingColumn=updated_at, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property updatedAt with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Group:updatedAt]
+2022-11-12 03:50:33 - building SimpleValue for updatedAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [updated_at]
+2022-11-12 03:50:33 - Building property updatedAt
+2022-11-12 03:50:33 - Cascading updatedAt with null
+2022-11-12 03:50:33 - Binding entity from annotated class: com.encom.msuser.model.entity.Privilege
+2022-11-12 03:50:33 - Normalizing identifier quoting [DTYPE]
+2022-11-12 03:50:33 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2022-11-12 03:50:33 - Import with entity name Role
+2022-11-12 03:50:33 - Import: Role -> com.encom.msuser.model.entity.Privilege
+2022-11-12 03:50:33 - Import: com.encom.msuser.model.entity.Privilege -> com.encom.msuser.model.entity.Privilege
+2022-11-12 03:50:33 - Normalizing identifier quoting [privileges]
+2022-11-12 03:50:33 - Normalizing identifier quoting [privileges]
+2022-11-12 03:50:33 - Bind entity com.encom.msuser.model.entity.Privilege on table privileges
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Privilege.id
+2022-11-12 03:50:33 - Normalizing identifier quoting [id]
+2022-11-12 03:50:33 - Normalizing identifier quoting [id]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(privileges), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - Not known whether passed class name [com.encom.msuser.model.entity.Privilege] is safe
+2022-11-12 03:50:33 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.encom.msuser.model.entity.Privilege
+2022-11-12 03:50:33 - MetadataSourceProcessor property id with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Privilege:id]
+2022-11-12 03:50:33 - building SimpleValue for id
+2022-11-12 03:50:33 - Normalizing identifier quoting [id]
+2022-11-12 03:50:33 - Building property id
+2022-11-12 03:50:33 - Cascading id with null
+2022-11-12 03:50:33 - Add generic generator with name: uuid2
+2022-11-12 03:50:33 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, uuid2, ...)
+2022-11-12 03:50:33 - Bind @Id on id
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Privilege.createdAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [created_at]
+2022-11-12 03:50:33 - Normalizing identifier quoting [created_at]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(privileges), mappingColumn=created_at, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property createdAt with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Privilege:createdAt]
+2022-11-12 03:50:33 - building SimpleValue for createdAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [created_at]
+2022-11-12 03:50:33 - Building property createdAt
+2022-11-12 03:50:33 - Cascading createdAt with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Privilege.description
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(privileges), mappingColumn=description, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property description with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Privilege:description]
+2022-11-12 03:50:33 - building SimpleValue for description
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Normalizing identifier quoting [description]
+2022-11-12 03:50:33 - Building property description
+2022-11-12 03:50:33 - Cascading description with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Privilege.name
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(privileges), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property name with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Privilege:name]
+2022-11-12 03:50:33 - building SimpleValue for name
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Building property name
+2022-11-12 03:50:33 - Cascading name with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.Privilege.updatedAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [updated_at]
+2022-11-12 03:50:33 - Normalizing identifier quoting [updated_at]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(privileges), mappingColumn=updated_at, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property updatedAt with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.Privilege:updatedAt]
+2022-11-12 03:50:33 - building SimpleValue for updatedAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [updated_at]
+2022-11-12 03:50:33 - Building property updatedAt
+2022-11-12 03:50:33 - Cascading updatedAt with null
+2022-11-12 03:50:33 - Binding entity from annotated class: com.encom.msuser.model.entity.User
+2022-11-12 03:50:33 - Normalizing identifier quoting [DTYPE]
+2022-11-12 03:50:33 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2022-11-12 03:50:33 - Import with entity name User
+2022-11-12 03:50:33 - Import: User -> com.encom.msuser.model.entity.User
+2022-11-12 03:50:33 - Import: com.encom.msuser.model.entity.User -> com.encom.msuser.model.entity.User
+2022-11-12 03:50:33 - Normalizing identifier quoting [users]
+2022-11-12 03:50:33 - Normalizing identifier quoting [users]
+2022-11-12 03:50:33 - Bind entity com.encom.msuser.model.entity.User on table users
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.User.id
+2022-11-12 03:50:33 - Normalizing identifier quoting [id]
+2022-11-12 03:50:33 - Normalizing identifier quoting [id]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - Not known whether passed class name [com.encom.msuser.model.entity.User] is safe
+2022-11-12 03:50:33 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.encom.msuser.model.entity.User
+2022-11-12 03:50:33 - MetadataSourceProcessor property id with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.User:id]
+2022-11-12 03:50:33 - building SimpleValue for id
+2022-11-12 03:50:33 - Normalizing identifier quoting [id]
+2022-11-12 03:50:33 - Building property id
+2022-11-12 03:50:33 - Cascading id with null
+2022-11-12 03:50:33 - Add generic generator with name: uuid2
+2022-11-12 03:50:33 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, uuid2, ...)
+2022-11-12 03:50:33 - Bind @Id on id
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.User.createdAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [created_at]
+2022-11-12 03:50:33 - Normalizing identifier quoting [created_at]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=created_at, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property createdAt with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.User:createdAt]
+2022-11-12 03:50:33 - building SimpleValue for createdAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [created_at]
+2022-11-12 03:50:33 - Building property createdAt
+2022-11-12 03:50:33 - Cascading createdAt with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.User.email
+2022-11-12 03:50:33 - Normalizing identifier quoting [email]
+2022-11-12 03:50:33 - Normalizing identifier quoting [email]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=email, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property email with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.User:email]
+2022-11-12 03:50:33 - building SimpleValue for email
+2022-11-12 03:50:33 - Normalizing identifier quoting [email]
+2022-11-12 03:50:33 - Normalizing identifier quoting [email]
+2022-11-12 03:50:33 - Normalizing identifier quoting [email]
+2022-11-12 03:50:33 - Building property email
+2022-11-12 03:50:33 - Cascading email with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.User.name
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property name with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.User:name]
+2022-11-12 03:50:33 - building SimpleValue for name
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Normalizing identifier quoting [name]
+2022-11-12 03:50:33 - Building property name
+2022-11-12 03:50:33 - Cascading name with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.User.surname
+2022-11-12 03:50:33 - Normalizing identifier quoting [surname]
+2022-11-12 03:50:33 - Normalizing identifier quoting [surname]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=surname, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property surname with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.User:surname]
+2022-11-12 03:50:33 - building SimpleValue for surname
+2022-11-12 03:50:33 - Normalizing identifier quoting [surname]
+2022-11-12 03:50:33 - Normalizing identifier quoting [surname]
+2022-11-12 03:50:33 - Normalizing identifier quoting [surname]
+2022-11-12 03:50:33 - Building property surname
+2022-11-12 03:50:33 - Cascading surname with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.User.updatedAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [updated_at]
+2022-11-12 03:50:33 - Normalizing identifier quoting [updated_at]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=updated_at, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property updatedAt with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.User:updatedAt]
+2022-11-12 03:50:33 - building SimpleValue for updatedAt
+2022-11-12 03:50:33 - Normalizing identifier quoting [updated_at]
+2022-11-12 03:50:33 - Building property updatedAt
+2022-11-12 03:50:33 - Cascading updatedAt with null
+2022-11-12 03:50:33 - Processing annotations of com.encom.msuser.model.entity.User.username
+2022-11-12 03:50:33 - Normalizing identifier quoting [username]
+2022-11-12 03:50:33 - Normalizing identifier quoting [username]
+2022-11-12 03:50:33 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=username, insertable=true, updatable=true, unique=false}
+2022-11-12 03:50:33 - MetadataSourceProcessor property username with lazy=false
+2022-11-12 03:50:33 - Attempting to locate auto-apply AttributeConverter for property [com.encom.msuser.model.entity.User:username]
+2022-11-12 03:50:33 - building SimpleValue for username
+2022-11-12 03:50:33 - Normalizing identifier quoting [username]
+2022-11-12 03:50:33 - Normalizing identifier quoting [username]
+2022-11-12 03:50:33 - Normalizing identifier quoting [username]
+2022-11-12 03:50:33 - Building property username
+2022-11-12 03:50:33 - Cascading username with null
+2022-11-12 03:50:33 - Starting fillSimpleValue for id
+2022-11-12 03:50:33 - Starting fillSimpleValue for createdAt
+2022-11-12 03:50:33 - Starting fillSimpleValue for description
+2022-11-12 03:50:33 - Starting fillSimpleValue for name
+2022-11-12 03:50:33 - Starting fillSimpleValue for updatedAt
+2022-11-12 03:50:33 - Starting fillSimpleValue for id
+2022-11-12 03:50:33 - Starting fillSimpleValue for createdAt
+2022-11-12 03:50:33 - Starting fillSimpleValue for description
+2022-11-12 03:50:33 - Starting fillSimpleValue for name
+2022-11-12 03:50:33 - Starting fillSimpleValue for updatedAt
+2022-11-12 03:50:33 - Starting fillSimpleValue for id
+2022-11-12 03:50:33 - Starting fillSimpleValue for createdAt
+2022-11-12 03:50:33 - Starting fillSimpleValue for email
+2022-11-12 03:50:33 - Starting fillSimpleValue for name
+2022-11-12 03:50:33 - Starting fillSimpleValue for surname
+2022-11-12 03:50:33 - Starting fillSimpleValue for updatedAt
+2022-11-12 03:50:33 - Starting fillSimpleValue for username
+2022-11-12 03:50:33 - Forcing column [id] to be non-null as it is part of the primary key for table [groups]
+2022-11-12 03:50:33 - Forcing column [id] to be non-null as it is part of the primary key for table [privileges]
+2022-11-12 03:50:33 - Forcing column [id] to be non-null as it is part of the primary key for table [users]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.boot.spi.SessionFactoryBuilderService]
+2022-11-12 03:50:33 - Interpreting BatchFetchStyle from setting : null
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.bytecode.spi.BytecodeProvider]
+2022-11-12 03:50:33 - Building session factory
+2022-11-12 03:50:33 - SessionFactory name : null
+2022-11-12 03:50:33 - Automatic flush during beforeCompletion(): enabled
+2022-11-12 03:50:33 - Automatic session close at end of transaction: disabled
+2022-11-12 03:50:33 - Statistics: disabled
+2022-11-12 03:50:33 - Deleted entity synthetic identifier rollback: disabled
+2022-11-12 03:50:33 - Default entity-mode: pojo
+2022-11-12 03:50:33 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2022-11-12 03:50:33 - Allow initialization of lazy state outside session : disabled
+2022-11-12 03:50:33 - Using BatchFetchStyle : LEGACY
+2022-11-12 03:50:33 - Default batch fetch size: -1
+2022-11-12 03:50:33 - Maximum outer join fetch depth: null
+2022-11-12 03:50:33 - Default null ordering: NONE
+2022-11-12 03:50:33 - Order SQL updates by primary key: disabled
+2022-11-12 03:50:33 - Order SQL inserts for batching: disabled
+2022-11-12 03:50:33 - multi-tenancy strategy : NONE
+2022-11-12 03:50:33 - JTA Track by Thread: enabled
+2022-11-12 03:50:33 - Query language substitutions: {}
+2022-11-12 03:50:33 - Named query checking : enabled
+2022-11-12 03:50:33 - Second-level cache: disabled
+2022-11-12 03:50:33 - Second-level query cache: disabled
+2022-11-12 03:50:33 - Second-level query cache factory: null
+2022-11-12 03:50:33 - Second-level cache region prefix: null
+2022-11-12 03:50:33 - Optimize second-level cache for minimal puts: disabled
+2022-11-12 03:50:33 - Structured second-level cache entries: disabled
+2022-11-12 03:50:33 - Second-level cache direct-reference entries: disabled
+2022-11-12 03:50:33 - Automatic eviction of collection cache: disabled
+2022-11-12 03:50:33 - JDBC batch size: 15
+2022-11-12 03:50:33 - JDBC batch updates for versioned data: enabled
+2022-11-12 03:50:33 - Scrollable result sets: enabled
+2022-11-12 03:50:33 - Wrap result sets: disabled
+2022-11-12 03:50:33 - JDBC3 getGeneratedKeys(): enabled
+2022-11-12 03:50:33 - JDBC result set fetch size: 2000
+2022-11-12 03:50:33 - Connection release mode: ON_CLOSE
+2022-11-12 03:50:33 - Generate SQL with comments: enabled
+2022-11-12 03:50:33 - JPA compliance - query : disabled
+2022-11-12 03:50:33 - JPA compliance - closed-handling : disabled
+2022-11-12 03:50:33 - JPA compliance - lists : disabled
+2022-11-12 03:50:33 - JPA compliance - transactions : disabled
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.service.spi.SessionFactoryServiceRegistryFactory]
+2022-11-12 03:50:33 - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2022-11-12 03:50:33 - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2022-11-12 03:50:33 - Normalizing identifier quoting [msuser]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.cache.spi.CacheImplementor]
+2022-11-12 03:50:33 - Session factory constructed with filter configurations : {}
+2022-11-12 03:50:33 - Instantiating session factory with properties: {awt.toolkit=sun.awt.windows.WToolkit, hibernate.format_sql=true, hibernate.id.new_generator_mappings=true, java.specification.version=11, sun.cpu.isalist=amd64, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@28e48b65, sun.jnu.encoding=Cp1252, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, hibernate.jdbc.lob.non_contextual_creation=true, LOG_PATH=logs/msuser/, sun.arch.data.model=64, java.vendor.url=https://aws.amazon.com/corretto/, catalina.useNaming=false, javax.persistence.validation.mode=AUTO, sun.boot.library.path=C:\Users\iselx\.jdks\corretto-11.0.15\bin, sun.java.command=com.encom.msuser.MsUserApplication, jdk.debug=release, spring.liveBeansView.mbeanDomain=, java.specification.vendor=Oracle Corporation, java.version.date=2022-04-19, java.home=C:\Users\iselx\.jdks\corretto-11.0.15, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
+, hibernate.persistenceUnitName=default, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, hibernate.hbm2ddl.auto=update, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.15+9-LTS, user.name=iselx, file.encoding=UTF-8, FILE_LOG_PATTERN=%d{yyyy-MM-dd HH:mm:ss} - %msg%n, java.vendor.version=Corretto-11.0.15.9.1, java.io.tmpdir=C:\Users\iselx\AppData\Local\Temp\, java.version=11.0.15, java.vm.specification.name=Java Virtual Machine Specification, PID=14348, java.awt.printerjob=sun.awt.windows.WPrinterJob, javax.persistence.schema-generation.database.action=create, sun.os.patch.level=, CONSOLE_LOG_CHARSET=UTF-8, java.library.path=C:\Users\iselx\.jdks\corretto-11.0.15\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\nodejs\;D:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\iselx\AppData\Local\Microsoft\WindowsApps;C:\Users\iselx\AppData\Roaming\npm;D:\Users\iselx\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\iselx\.dotnet\tools;D:\JetBrains\DataGrip 2022.1.5\bin;;D:\Program Files (x86)\Nmap;., java.vendor=Amazon.com Inc., hibernate.hbm2dll.create_namespaces=true, java.rmi.server.randomIDs=true, sun.io.unicode.encoding=UnicodeLittle, hibernate.archive.scanner=org.hibernate.boot.archive.scan.internal.DisabledScanner, hibernate.ddl-auto=create, sun.desktop=windows, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.class.path=D:\Projects\apollo\ms-user\build\classes\java\main;D:\Projects\apollo\ms-user\build\resources\main;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.projectlombok\lombok\1.18.24\13a394eed5c4f9efb2a6d956e2086f1d81e857d9\lombok-1.18.24.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.mapstruct\mapstruct-processor\1.5.3.Final\dce418bedafd71ff8dd2cef15006c0fee788b073\mapstruct-processor-1.5.3.Final.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\2.7.5\bb4099d0466a62c3b11ab9323babca13bb430a2e\spring-boot-starter-web-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-data-jpa\2.7.5\b83184467079d5b808fb2f9fbc858b1804975808\spring-boot-starter-data-jpa-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.mapstruct\mapstruct\1.5.3.Final\5f5d063858957ef086858bc3d003f702082297f3\mapstruct-1.5.3.Final.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-actuator\2.7.5\857f233cf5c75b2043b0b7d8d5904b4efcb3670c\spring-boot-starter-actuator-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springdoc\springdoc-openapi-ui\1.6.12\1fb4811c879230349704edc7587ae7a280ef4b81\springdoc-openapi-ui-1.6.12.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-json\2.7.5\9c7df04ff37b2e7471632ddeb4a296c5fb6bddee\spring-boot-starter-json-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\2.7.5\c28e1546461803490588085345ba5d2897d232bc\spring-boot-starter-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\2.7.5\eb7849c52953de44d9712adf45398ccb1a7d4295\spring-boot-starter-tomcat-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\5.3.23\b163527c275b0374371890c0b76c2a2a09f9804b\spring-webmvc-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\5.3.23\193f5276092d9cbe3222c63885b47ca7b2cce97\spring-web-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-aop\2.7.5\ea4b85395faaa3a382f2a582e4bf023d088d320e\spring-boot-starter-aop-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-jdbc\2.7.5\b57c3f8fb2fe235a8ff368755092371423bbc5b3\spring-boot-starter-jdbc-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\jakarta.transaction\jakarta.transaction-api\1.3.3\c4179d48720a1e87202115fbed6089bdc4195405\jakarta.transaction-api-1.3.3.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\jakarta.persistence\jakarta.persistence-api\2.2.3\8f6ea5daedc614f07a3654a455660145286f024e\jakarta.persistence-api-2.2.3.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-core\5.6.12.Final\66720fe38bdb9515924d559b8aac7b522d7ae171\hibernate-core-5.6.12.Final.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-jpa\2.7.5\dc0bb497a33fcd3f82fe0ccfd674476d93889b3d\spring-data-jpa-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aspects\5.3.23\35a0f5df4241f794fd79dd2447195ac055e88b8e\spring-aspects-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-actuator-autoconfigure\2.7.5\ca92083d309c8239d1844683eb8c7241649c4adb\spring-boot-actuator-autoconfigure-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\io.micrometer\micrometer-core\1.9.5\927ffd91d36d5c743e2a67d3c8cb320790ee1e34\micrometer-core-1.9.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springdoc\springdoc-openapi-webmvc-core\1.6.12\a7dbe967e0b3a5ffb3213f80d4ec61a51363c6f6\springdoc-openapi-webmvc-core-1.6.12.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.webjars\swagger-ui\4.14.3\a7769f120122c1411cb97a0cd0595d0807992620\swagger-ui-4.14.3.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.webjars\webjars-locator-core\0.50\d1ae68f5fea4f8e36e1d9adfd1ac02463c43894a\webjars-locator-core-0.50.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\io.github.classgraph\classgraph\4.8.149\4bc2f188bc9001473d4a26ac488c2ae1a3e906de\classgraph-4.8.149.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\2.13.4\557dbba5d8dfc7b7f944c58fe084109afcb5670b\jackson-datatype-jdk8-2.13.4.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\2.13.4\e6d820112871f33cd94a1dcc54eef58874753b5\jackson-datatype-jsr310-2.13.4.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.module\jackson-module-parameter-names\2.13.4\858ccf6624b5fac6044813e845063edb6a62cf37\jackson-module-parameter-names-2.13.4.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.13.4.2\325c06bdfeb628cfb80ebaaf1a26cc1eb558a585\jackson-databind-2.13.4.2.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\2.7.5\96646e63a2296d0a3209383e81cdb8c87ab2f913\spring-boot-autoconfigure-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\2.7.5\fd04e228e6e21b7ad13c10ae29afd31868d842e5\spring-boot-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-logging\2.7.5\61f4c53e35baa31a269bbeb7bb9d5e781448feef\spring-boot-starter-logging-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\jakarta.annotation\jakarta.annotation-api\1.3.5\59eb84ee0d616332ff44aba065f3888cf002cd2d\jakarta.annotation-api-1.3.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\5.3.23\91407dc1106ea423c44150f3da1a0b4f8e25e5ca\spring-core-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\1.30\8fde7fe2586328ac3c68db92045e1c8759125000\snakeyaml-1.30.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-websocket\9.0.68\15fc94001bb916a808631422a6488a678496ef94\tomcat-embed-websocket-9.0.68.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-core\9.0.68\caafeb87d6ff30adda888049c9b81591c7cc20d1\tomcat-embed-core-9.0.68.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-el\9.0.68\296afe7483256960d7ebdd8dcb4b49775d7cb85f\tomcat-embed-el-9.0.68.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\5.3.23\530b36b2ce2c9e471c6a260c3f181bcd20325a58\spring-context-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\5.3.23\30d0034ba29178e98781d85f51a7eb709a628e9b\spring-aop-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\5.3.23\3bdefbf6042ed742cbe16f27d2d14cca9096a606\spring-beans-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\5.3.23\3a676bf4b9bc42bd37ab5ad264acb6ceb63397a2\spring-expression-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.9.7\158f5c255cd3e4408e795b79f7c3fbae9b53b7ca\aspectjweaver-1.9.7.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jdbc\5.3.23\c859919a644942822e49cb7f2404b2c4d3cba040\spring-jdbc-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.zaxxer\HikariCP\4.0.3\107cbdf0db6780a065f895ae9d8fbf3bb0e1c21f\HikariCP-4.0.3.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.hibernate.common\hibernate-commons-annotations\5.1.2.Final\e59ffdbc6ad09eeb33507b39ffcf287679a498c8\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.4.3.Final\c4bd7e12a745c0e7f6cf98c45cdcdf482fd827ea\jboss-logging-3.4.3.Final.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy\1.12.18\875a9c3f29d2f6f499dfd60d76e97a343f9b1233\byte-buddy-1.12.18.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\antlr\antlr\2.7.7\83cd2cd674a217ade95a4bb83a8a14f351f48bd0\antlr-2.7.7.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.jboss\jandex\2.4.2.Final\1e1c385990b258ff1a24c801e84aebbacf70eb39\jandex-2.4.2.Final.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.fasterxml\classmate\1.5.1\3fe0bed568c62df5e89f4f174c101eab25345b6c\classmate-1.5.1.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.7\ebcde6a44159eb9e3db721dfe6b45f26e6272341\jaxb-runtime-2.3.7.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-orm\5.3.23\7d023546cde0f1b2b8d289c690679f740394298b\spring-orm-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-commons\2.7.5\314b3faf010d9a5bf5a7cf12914e721ad0257f4\spring-data-commons-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\5.3.23\ab313b4028c62e18fe02defdd5050af704778428\spring-tx-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.36\6c62681a2f655b49963a5983b8b0950a6120ae14\slf4j-api-1.7.36.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-actuator\2.7.5\2b49347939859a93b7ca0f192a3f92bc92c7e029\spring-boot-actuator-2.7.5.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.hdrhistogram\HdrHistogram\2.1.12\6eb7552156e0d517ae80cc2247be1427c8d90452\HdrHistogram-2.1.12.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springdoc\springdoc-openapi-common\1.6.12\db0ef2050b3303f85da1d5ee158f5bbd8e97706e\springdoc-openapi-common-1.6.12.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.13.4\cf934c681294b97ef6d80082faeefbe1edadf56\jackson-core-2.13.4.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.13.4\858c6cc78e1f08a885b1613e1d817c829df70a6e\jackson-annotations-2.13.4.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.2.11\4741689214e9d1e8408b206506cbe76d1c6a7d60\logback-classic-1.2.11.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-to-slf4j\2.17.2\17dd0fae2747d9a28c67bc9534108823d2376b46\log4j-to-slf4j-2.17.2.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\1.7.36\ed46d81cef9c412a88caef405b58f93a678ff2ca\jul-to-slf4j-1.7.36.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jcl\5.3.23\3c7eb5fcca67b611065f73ff4325e398f8b051a3\spring-jcl-5.3.23.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\jakarta.xml.bind\jakarta.xml.bind-api\2.3.3\48e3b9cfc10752fba3521d6511f4165bea951801\jakarta.xml.bind-api-2.3.3.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\txw2\2.3.7\55cddcac1945150e09b09b0f89d86799652eee82\txw2-2.3.7.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.sun.istack\istack-commons-runtime\3.0.12\cbbe1a62b0cc6c85972e99d52aaee350153dc530\istack-commons-runtime-3.0.12.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\io.swagger.core.v3\swagger-core\2.2.4\e4a3eaf29011a5928f02efbc52cfa3a9c3d8320c\swagger-core-2.2.4.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.2.11\a01230df5ca5c34540cdaa3ad5efb012f1f1f792\logback-core-1.2.11.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.17.2\f42d6afa111b4dec5d2aea0fe2197240749a4ea6\log4j-api-2.17.2.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\io.swagger.core.v3\swagger-models\2.2.4\11a7ca8255efe1a0eac0b00990acf89b78d3b23a\swagger-models-2.2.4.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.dataformat\jackson-dataformat-yaml\2.13.4\3142ec201e878372d1561e64bd1a947d9e88a03d\jackson-dataformat-yaml-2.13.4.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.12.0\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e\commons-lang3-3.12.0.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\io.swagger.core.v3\swagger-annotations\2.2.4\28cf754edbe091e47b951fd5f96a247cc8adce87\swagger-annotations-2.2.4.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\jakarta.validation\jakarta.validation-api\2.0.2\5eacc6522521f7eacb081f95cee1e231648461e7\jakarta.validation-api-2.0.2.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.postgresql\postgresql\42.3.7\1b4a36e733974ac465aa9dc972236a32ce75bb25\postgresql-42.3.7.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.5.0\2f50520c8abea66fbd8d26e481d3aef5c673b510\checker-qual-3.5.0.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\org.latencyutils\LatencyUtils\2.0.3\769c0b82cb2421c8256300e907298a9410a2a3d3\LatencyUtils-2.0.3.jar;C:\Users\iselx\.gradle\caches\modules-2\files-2.1\com.sun.activation\jakarta.activation\1.2.2\74548703f9851017ce2f556066659438019e7eb5\jakarta.activation-1.2.2.jar, java.vm.vendor=Amazon.com Inc., user.variant=, user.timezone=Asia/Baku, jakarta.persistence.sharedCache.mode=UNSPECIFIED, os.name=Windows 11, java.vm.specification.version=11, hibernate.generate_statistics=false, jakarta.persistence.nonJtaDataSource=HikariDataSource (HikariUserCP), sun.java.launcher=SUN_STANDARD, user.country=US, spring.application.admin.enabled=true, javax.persistence.nonJtaDataSource=HikariDataSource (HikariUserCP), hibernate.use_sql_comments=true, hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@6cde0c69, com.sun.management.jmxremote=, javax.persistence.sharedCache.mode=UNSPECIFIED, sun.cpu.endian=little, user.home=C:\Users\iselx, user.language=en, hibernate.jdbc.fetch_size=2000, spring.output.ansi.enabled=always, FILE_LOG_CHARSET=UTF-8, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.awt.headless=true, jakarta.persistence.validation.mode=AUTO, spring.jmx.enabled=true, path.separator=;, os.version=10.0, java.runtime.name=OpenJDK Runtime Environment, hibernate.ejb.persistenceUnitName=default, spring.beaninfo.ignore=true, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, LOG_FILE=logs\msuser\spring.log, java.vendor.url.bug=https://github.com/corretto/corretto-11/issues/, catalina.home=C:\Users\iselx\AppData\Local\Temp\tomcat.8080.14063942542856165037, hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy, user.dir=D:\Projects\apollo, os.arch=amd64, hibernate.default_schema=msuser, javax.persistence.create-database-schemas=true, catalina.base=C:\Users\iselx\AppData\Local\Temp\tomcat.8080.14063942542856165037, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@6f4d2294, java.vm.info=mixed mode, java.vm.version=11.0.15+9-LTS, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.datasource=HikariDataSource (HikariUserCP), java.class.version=55.0}
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.engine.query.spi.NativeQueryInterpreter]
+2022-11-12 03:50:33 - Unable to acquire Bean Validation ValidatorFactory, skipping activation
+2022-11-12 03:50:33 - Skipping JACC integration as it was not enabled
+2022-11-12 03:50:33 - Instantiated session factory
+2022-11-12 03:50:33 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@6e981e78] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@2336cd91]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.persister.spi.PersisterFactory]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.persister.spi.PersisterClassResolver]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.property.access.spi.PropertyAccessStrategyResolver]
+2022-11-12 03:50:33 - Not known whether passed class name [com.encom.msuser.model.entity.Group] is safe
+2022-11-12 03:50:33 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.encom.msuser.model.entity.Group
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.bytecode.spi.ProxyFactoryFactory]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [createdAt], existing type = [org.hibernate.type.LocalDateTimeType@72eed547], incoming type = [org.hibernate.type.LocalDateTimeType@72eed547]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [description], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [name], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [updatedAt], existing type = [org.hibernate.type.LocalDateTimeType@72eed547], incoming type = [org.hibernate.type.LocalDateTimeType@72eed547]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [id], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Not known whether passed class name [com.encom.msuser.model.entity.User] is safe
+2022-11-12 03:50:33 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.encom.msuser.model.entity.User
+2022-11-12 03:50:33 - Skipping duplicate registration of path [createdAt], existing type = [org.hibernate.type.LocalDateTimeType@72eed547], incoming type = [org.hibernate.type.LocalDateTimeType@72eed547]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [email], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [name], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [surname], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [updatedAt], existing type = [org.hibernate.type.LocalDateTimeType@72eed547], incoming type = [org.hibernate.type.LocalDateTimeType@72eed547]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [username], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [id], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Not known whether passed class name [com.encom.msuser.model.entity.Privilege] is safe
+2022-11-12 03:50:33 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.encom.msuser.model.entity.Privilege
+2022-11-12 03:50:33 - Skipping duplicate registration of path [createdAt], existing type = [org.hibernate.type.LocalDateTimeType@72eed547], incoming type = [org.hibernate.type.LocalDateTimeType@72eed547]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [description], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [name], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [updatedAt], existing type = [org.hibernate.type.LocalDateTimeType@72eed547], incoming type = [org.hibernate.type.LocalDateTimeType@72eed547]
+2022-11-12 03:50:33 - Skipping duplicate registration of path [id], existing type = [org.hibernate.type.StringType@510da778], incoming type = [org.hibernate.type.StringType@510da778]
+2022-11-12 03:50:33 - Static SQL for entity: com.encom.msuser.model.entity.Group
+2022-11-12 03:50:33 -  Version select: /* get version com.encom.msuser.model.entity.Group */ select id from msuser.groups where id =?
+2022-11-12 03:50:33 -  Snapshot select: /* get current state com.encom.msuser.model.entity.Group */ select group_.id, group_.created_at as created_2_0_, group_.description as descript3_0_, group_.name as name4_0_, group_.updated_at as updated_5_0_ from msuser.groups group_ where group_.id=?
+2022-11-12 03:50:33 -  Insert 0: /* insert com.encom.msuser.model.entity.Group */ insert into msuser.groups (created_at, description, name, updated_at, id) values (?, ?, ?, ?, ?)
+2022-11-12 03:50:33 -  Update 0: /* update com.encom.msuser.model.entity.Group */ update msuser.groups set created_at=?, description=?, name=?, updated_at=? where id=?
+2022-11-12 03:50:33 -  Delete 0: /* delete com.encom.msuser.model.entity.Group */ delete from msuser.groups where id=?
+2022-11-12 03:50:33 -  Starting root entity : com.encom.msuser.model.entity.Group
+2022-11-12 03:50:33 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@e18d2a2]
+2022-11-12 03:50:33 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1ab28416
+2022-11-12 03:50:33 - .. Registering AssociationKey : AssociationKey(table=msuser.groups, columns={id}) -> org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1ab28416
+2022-11-12 03:50:33 - >> Starting entity identifier : com.encom.msuser.model.entity.Group
+2022-11-12 03:50:33 - Visiting attribute path : createdAt
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=createdAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=createdAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : description
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=description, type=string [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=description, type=string [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : name
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=name, type=string [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=name, type=string [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : updatedAt
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=updatedAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=updatedAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@1ab28416
+2022-11-12 03:50:33 -  Finished root entity : com.encom.msuser.model.entity.Group
+2022-11-12 03:50:33 - Building LoadPlan...
+2022-11-12 03:50:33 - processing queryspace <gen:0>
+2022-11-12 03:50:33 - LoadPlan(entity=com.encom.msuser.model.entity.Group)
+    - Returns
+       - EntityReturnImpl(entity=com.encom.msuser.model.entity.Group, querySpaceUid=<gen:0>, path=com.encom.msuser.model.entity.Group)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.encom.msuser.model.entity.Group)
+          - SQL table alias mapping - group0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2022-11-12 03:50:33 - Static select for entity com.encom.msuser.model.entity.Group [NONE]: select group0_.id as id1_0_0_, group0_.created_at as created_2_0_0_, group0_.description as descript3_0_0_, group0_.name as name4_0_0_, group0_.updated_at as updated_5_0_0_ from msuser.groups group0_ where group0_.id=?
+2022-11-12 03:50:33 - Static SQL for entity: com.encom.msuser.model.entity.User
+2022-11-12 03:50:33 -  Version select: /* get version com.encom.msuser.model.entity.User */ select id from msuser.users where id =?
+2022-11-12 03:50:33 -  Snapshot select: /* get current state com.encom.msuser.model.entity.User */ select user_.id, user_.created_at as created_2_2_, user_.email as email3_2_, user_.name as name4_2_, user_.surname as surname5_2_, user_.updated_at as updated_6_2_, user_.username as username7_2_ from msuser.users user_ where user_.id=?
+2022-11-12 03:50:33 -  Insert 0: /* insert com.encom.msuser.model.entity.User */ insert into msuser.users (created_at, email, name, surname, updated_at, username, id) values (?, ?, ?, ?, ?, ?, ?)
+2022-11-12 03:50:33 -  Update 0: /* update com.encom.msuser.model.entity.User */ update msuser.users set created_at=?, email=?, name=?, surname=?, updated_at=?, username=? where id=?
+2022-11-12 03:50:33 -  Delete 0: /* delete com.encom.msuser.model.entity.User */ delete from msuser.users where id=?
+2022-11-12 03:50:33 -  Starting root entity : com.encom.msuser.model.entity.User
+2022-11-12 03:50:33 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@25e796fe]
+2022-11-12 03:50:33 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@62c53685
+2022-11-12 03:50:33 - .. Registering AssociationKey : AssociationKey(table=msuser.users, columns={id}) -> org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@62c53685
+2022-11-12 03:50:33 - >> Starting entity identifier : com.encom.msuser.model.entity.User
+2022-11-12 03:50:33 - Visiting attribute path : createdAt
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=createdAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=createdAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : email
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=email, type=string [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=email, type=string [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : name
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=name, type=string [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=name, type=string [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : surname
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=surname, type=string [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=surname, type=string [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : updatedAt
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=updatedAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=updatedAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : username
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=username, type=string [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=username, type=string [non-identifier])
+2022-11-12 03:50:33 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@62c53685
+2022-11-12 03:50:33 -  Finished root entity : com.encom.msuser.model.entity.User
+2022-11-12 03:50:33 - Building LoadPlan...
+2022-11-12 03:50:33 - processing queryspace <gen:0>
+2022-11-12 03:50:33 - LoadPlan(entity=com.encom.msuser.model.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=com.encom.msuser.model.entity.User, querySpaceUid=<gen:0>, path=com.encom.msuser.model.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.encom.msuser.model.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+2022-11-12 03:50:33 - Static select for entity com.encom.msuser.model.entity.User [NONE]: select user0_.id as id1_2_0_, user0_.created_at as created_2_2_0_, user0_.email as email3_2_0_, user0_.name as name4_2_0_, user0_.surname as surname5_2_0_, user0_.updated_at as updated_6_2_0_, user0_.username as username7_2_0_ from msuser.users user0_ where user0_.id=?
+2022-11-12 03:50:33 - Static SQL for entity: com.encom.msuser.model.entity.Privilege
+2022-11-12 03:50:33 -  Version select: /* get version com.encom.msuser.model.entity.Privilege */ select id from msuser.privileges where id =?
+2022-11-12 03:50:33 -  Snapshot select: /* get current state com.encom.msuser.model.entity.Privilege */ select role_.id, role_.created_at as created_2_1_, role_.description as descript3_1_, role_.name as name4_1_, role_.updated_at as updated_5_1_ from msuser.privileges role_ where role_.id=?
+2022-11-12 03:50:33 -  Insert 0: /* insert com.encom.msuser.model.entity.Privilege */ insert into msuser.privileges (created_at, description, name, updated_at, id) values (?, ?, ?, ?, ?)
+2022-11-12 03:50:33 -  Update 0: /* update com.encom.msuser.model.entity.Privilege */ update msuser.privileges set created_at=?, description=?, name=?, updated_at=? where id=?
+2022-11-12 03:50:33 -  Delete 0: /* delete com.encom.msuser.model.entity.Privilege */ delete from msuser.privileges where id=?
+2022-11-12 03:50:33 -  Starting root entity : com.encom.msuser.model.entity.Privilege
+2022-11-12 03:50:33 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@29ba63f0]
+2022-11-12 03:50:33 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4822ab4d
+2022-11-12 03:50:33 - .. Registering AssociationKey : AssociationKey(table=msuser.privileges, columns={id}) -> org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4822ab4d
+2022-11-12 03:50:33 - >> Starting entity identifier : com.encom.msuser.model.entity.Privilege
+2022-11-12 03:50:33 - Visiting attribute path : createdAt
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=createdAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=createdAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : description
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=description, type=string [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=description, type=string [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : name
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=name, type=string [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=name, type=string [non-identifier])
+2022-11-12 03:50:33 - Visiting attribute path : updatedAt
+2022-11-12 03:50:33 - >> Starting attribute Attribute(name=updatedAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - << Finishing up attribute : Attribute(name=updatedAt, type=LocalDateTime [non-identifier])
+2022-11-12 03:50:33 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4822ab4d
+2022-11-12 03:50:33 -  Finished root entity : com.encom.msuser.model.entity.Privilege
+2022-11-12 03:50:33 - Building LoadPlan...
+2022-11-12 03:50:33 - processing queryspace <gen:0>
+2022-11-12 03:50:33 - LoadPlan(entity=com.encom.msuser.model.entity.Privilege)
+    - Returns
+       - EntityReturnImpl(entity=com.encom.msuser.model.entity.Privilege, querySpaceUid=<gen:0>, path=com.encom.msuser.model.entity.Privilege)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.encom.msuser.model.entity.Privilege)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+2022-11-12 03:50:33 - Static select for entity com.encom.msuser.model.entity.Privilege [NONE]: select role0_.id as id1_1_0_, role0_.created_at as created_2_1_0_, role0_.description as descript3_1_0_, role0_.name as name4_1_0_, role0_.updated_at as updated_5_1_0_ from msuser.privileges role0_ where role0_.id=?
+2022-11-12 03:50:33 - Wrapping up metadata context...
+2022-11-12 03:50:33 - Starting entity [com.encom.msuser.model.entity.Group]
+2022-11-12 03:50:33 - Building identifier attribute [Group.id]
+2022-11-12 03:50:33 - Starting attribute metadata determination [id]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.Group.id]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [Group.createdAt]
+2022-11-12 03:50:33 - Starting attribute metadata determination [createdAt]
+2022-11-12 03:50:33 -     Determined member [private java.time.LocalDateTime com.encom.msuser.model.entity.Group.createdAt]
+2022-11-12 03:50:33 -     Determined type [name=LocalDateTime, class=org.hibernate.type.LocalDateTimeType]
+2022-11-12 03:50:33 - Building attribute [Group.description]
+2022-11-12 03:50:33 - Starting attribute metadata determination [description]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.Group.description]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [Group.name]
+2022-11-12 03:50:33 - Starting attribute metadata determination [name]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.Group.name]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [Group.updatedAt]
+2022-11-12 03:50:33 - Starting attribute metadata determination [updatedAt]
+2022-11-12 03:50:33 -     Determined member [private java.time.LocalDateTime com.encom.msuser.model.entity.Group.updatedAt]
+2022-11-12 03:50:33 -     Determined type [name=LocalDateTime, class=org.hibernate.type.LocalDateTimeType]
+2022-11-12 03:50:33 - Completed entity [com.encom.msuser.model.entity.Group]
+2022-11-12 03:50:33 - Starting entity [com.encom.msuser.model.entity.User]
+2022-11-12 03:50:33 - Building identifier attribute [User.id]
+2022-11-12 03:50:33 - Starting attribute metadata determination [id]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.User.id]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [User.createdAt]
+2022-11-12 03:50:33 - Starting attribute metadata determination [createdAt]
+2022-11-12 03:50:33 -     Determined member [private java.time.LocalDateTime com.encom.msuser.model.entity.User.createdAt]
+2022-11-12 03:50:33 -     Determined type [name=LocalDateTime, class=org.hibernate.type.LocalDateTimeType]
+2022-11-12 03:50:33 - Building attribute [User.email]
+2022-11-12 03:50:33 - Starting attribute metadata determination [email]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.User.email]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [User.name]
+2022-11-12 03:50:33 - Starting attribute metadata determination [name]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.User.name]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [User.surname]
+2022-11-12 03:50:33 - Starting attribute metadata determination [surname]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.User.surname]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [User.updatedAt]
+2022-11-12 03:50:33 - Starting attribute metadata determination [updatedAt]
+2022-11-12 03:50:33 -     Determined member [private java.time.LocalDateTime com.encom.msuser.model.entity.User.updatedAt]
+2022-11-12 03:50:33 -     Determined type [name=LocalDateTime, class=org.hibernate.type.LocalDateTimeType]
+2022-11-12 03:50:33 - Building attribute [User.username]
+2022-11-12 03:50:33 - Starting attribute metadata determination [username]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.User.username]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Completed entity [com.encom.msuser.model.entity.User]
+2022-11-12 03:50:33 - Starting entity [com.encom.msuser.model.entity.Privilege]
+2022-11-12 03:50:33 - Building identifier attribute [Role.id]
+2022-11-12 03:50:33 - Starting attribute metadata determination [id]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.Privilege.id]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [Role.createdAt]
+2022-11-12 03:50:33 - Starting attribute metadata determination [createdAt]
+2022-11-12 03:50:33 -     Determined member [private java.time.LocalDateTime com.encom.msuser.model.entity.Privilege.createdAt]
+2022-11-12 03:50:33 -     Determined type [name=LocalDateTime, class=org.hibernate.type.LocalDateTimeType]
+2022-11-12 03:50:33 - Building attribute [Role.description]
+2022-11-12 03:50:33 - Starting attribute metadata determination [description]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.Privilege.description]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [Role.name]
+2022-11-12 03:50:33 - Starting attribute metadata determination [name]
+2022-11-12 03:50:33 -     Determined member [private java.lang.String com.encom.msuser.model.entity.Privilege.name]
+2022-11-12 03:50:33 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2022-11-12 03:50:33 - Building attribute [Role.updatedAt]
+2022-11-12 03:50:33 - Starting attribute metadata determination [updatedAt]
+2022-11-12 03:50:33 -     Determined member [private java.time.LocalDateTime com.encom.msuser.model.entity.Privilege.updatedAt]
+2022-11-12 03:50:33 -     Determined type [name=LocalDateTime, class=org.hibernate.type.LocalDateTimeType]
+2022-11-12 03:50:33 - Completed entity [com.encom.msuser.model.entity.Privilege]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.tool.schema.spi.SchemaManagementTool]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.tool.hbm2ddl.ImportSqlCommandExtractor]
+2022-11-12 03:50:33 - HHH000504: Multiple configuration properties defined to create schema. Choose at most one among 'javax.persistence.create-database-schemas', 'hibernate.hbm2ddl.create_namespaces', 'hibernate.hbm2dll.create_namespaces' (this last being deprecated).
+2022-11-12 03:50:33 - Normalizing identifier quoting [msuser]
+2022-11-12 03:50:33 - create schema msuser
+2022-11-12 03:50:33 - GenerationTarget encountered exception accepting command : Error executing DDL "create schema msuser" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create schema msuser" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:255)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.encom.msuser.MsUserApplication.main(MsUserApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: schema "msuser" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:329)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:315)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:291)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:286)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 34 common frames omitted
+2022-11-12 03:50:33 - 
+    
+    create table msuser.groups (
+       id VARCHAR(255) not null,
+        created_at timestamp,
+        description varchar(255),
+        name varchar(255),
+        updated_at timestamp,
+        primary key (id)
+    )
+2022-11-12 03:50:33 - GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table msuser.groups (
+       id VARCHAR(255) not null,
+        created_at timestamp,
+        description varchar(255),
+        name varchar(255),
+        updated_at timestamp,
+        primary key (id)
+    )" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table msuser.groups (
+       id VARCHAR(255) not null,
+        created_at timestamp,
+        description varchar(255),
+        name varchar(255),
+        updated_at timestamp,
+        primary key (id)
+    )" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:325)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.encom.msuser.MsUserApplication.main(MsUserApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "groups" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:329)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:315)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:291)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:286)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 34 common frames omitted
+2022-11-12 03:50:33 - 
+    
+    create table msuser.privileges (
+       id VARCHAR(255) not null,
+        created_at timestamp,
+        description varchar(255),
+        name varchar(255),
+        updated_at timestamp,
+        primary key (id)
+    )
+2022-11-12 03:50:33 - GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table msuser.privileges (
+       id VARCHAR(255) not null,
+        created_at timestamp,
+        description varchar(255),
+        name varchar(255),
+        updated_at timestamp,
+        primary key (id)
+    )" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table msuser.privileges (
+       id VARCHAR(255) not null,
+        created_at timestamp,
+        description varchar(255),
+        name varchar(255),
+        updated_at timestamp,
+        primary key (id)
+    )" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:325)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.encom.msuser.MsUserApplication.main(MsUserApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "privileges" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:329)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:315)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:291)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:286)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 34 common frames omitted
+2022-11-12 03:50:33 - 
+    
+    create table msuser.users (
+       id VARCHAR(255) not null,
+        created_at timestamp,
+        email varchar(255),
+        name varchar(255),
+        surname varchar(255),
+        updated_at timestamp,
+        username varchar(255),
+        primary key (id)
+    )
+2022-11-12 03:50:33 - GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table msuser.users (
+       id VARCHAR(255) not null,
+        created_at timestamp,
+        email varchar(255),
+        name varchar(255),
+        surname varchar(255),
+        updated_at timestamp,
+        username varchar(255),
+        primary key (id)
+    )" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table msuser.users (
+       id VARCHAR(255) not null,
+        created_at timestamp,
+        email varchar(255),
+        name varchar(255),
+        surname varchar(255),
+        updated_at timestamp,
+        username varchar(255),
+        primary key (id)
+    )" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:325)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.encom.msuser.MsUserApplication.main(MsUserApplication.java:10)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "users" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:329)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:315)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:291)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:286)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 34 common frames omitted
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform]
+2022-11-12 03:50:33 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 03:50:33 - Checking 0 named HQL queries
+2022-11-12 03:50:33 - Checking 0 named SQL queries
+2022-11-12 03:50:33 - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2022-11-12 03:50:33 - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@2336cd91] for TypeConfiguration
+2022-11-12 03:50:33 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@6821c63c
+2022-11-12 03:50:33 - Registering SessionFactory: 3eb76604-8157-49d5-8b43-5f6a0a1c0eae (<unnamed>)
+2022-11-12 03:50:33 - Not binding SessionFactory to JNDI, no JNDI name configured
+2022-11-12 03:50:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 03:50:33 - Initializing JpaMetamodelMappingContext…
+2022-11-12 03:50:33 - Finished initializing JpaMetamodelMappingContext!
+2022-11-12 03:50:33 - Opening Hibernate Session.  tenant=null
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.stat.spi.StatisticsImplementor]
+2022-11-12 03:50:33 - Statistics initialized [enabled=false]
+2022-11-12 03:50:33 - Initializing service [privilege=org.hibernate.jmx.spi.JmxService]
+2022-11-12 03:50:33 - Opened Session [65f8e927-79f7-452c-aa75-49916864aa56] at timestamp: 1668210633830
+2022-11-12 03:50:33 - Closing session [65f8e927-79f7-452c-aa75-49916864aa56]
+2022-11-12 03:50:33 - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@34626d4]
+2022-11-12 03:50:33 - Releasing JDBC resources
+2022-11-12 03:50:33 - Closing logical connection
+2022-11-12 03:50:33 - Logical connection closed
+2022-11-12 03:50:33 - Opening Hibernate Session.  tenant=null
+2022-11-12 03:50:33 - Opened Session [db26648f-5535-451f-961c-e951487e946c] at timestamp: 1668210633854
+2022-11-12 03:50:33 - Closing session [db26648f-5535-451f-961c-e951487e946c]
+2022-11-12 03:50:33 - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@6afaf27]
+2022-11-12 03:50:33 - Releasing JDBC resources
+2022-11-12 03:50:33 - Closing logical connection
+2022-11-12 03:50:33 - Logical connection closed
+2022-11-12 03:50:33 - Initializing repository instance for com.encom.msuser.repository.GroupRepository…
+2022-11-12 03:50:33 - Opening Hibernate Session.  tenant=null
+2022-11-12 03:50:33 - Opened Session [d6c1b0ed-7075-4a07-9c81-f08a23124d4f] at timestamp: 1668210633900
+2022-11-12 03:50:33 - Closing session [d6c1b0ed-7075-4a07-9c81-f08a23124d4f]
+2022-11-12 03:50:33 - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@126d8659]
+2022-11-12 03:50:33 - Releasing JDBC resources
+2022-11-12 03:50:33 - Closing logical connection
+2022-11-12 03:50:33 - Logical connection closed
+2022-11-12 03:50:33 - Finished creation of repository instance for com.encom.msuser.repository.GroupRepository.
+2022-11-12 03:50:33 - Opening Hibernate Session.  tenant=null
+2022-11-12 03:50:33 - Opened Session [257053c9-ed00-4447-a8ad-d023ac3b2ebb] at timestamp: 1668210633952
+2022-11-12 03:50:33 - Closing session [257053c9-ed00-4447-a8ad-d023ac3b2ebb]
+2022-11-12 03:50:33 - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@587400a9]
+2022-11-12 03:50:33 - Releasing JDBC resources
+2022-11-12 03:50:33 - Closing logical connection
+2022-11-12 03:50:33 - Logical connection closed
+2022-11-12 03:50:33 - Initializing repository instance for com.encom.msuser.repository.RoleRepository…
+2022-11-12 03:50:33 - Opening Hibernate Session.  tenant=null
+2022-11-12 03:50:33 - Opened Session [4ca17d3c-9da3-455d-b696-7dce4ace2530] at timestamp: 1668210633955
+2022-11-12 03:50:33 - Closing session [4ca17d3c-9da3-455d-b696-7dce4ace2530]
+2022-11-12 03:50:33 - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@709d2a6c]
+2022-11-12 03:50:33 - Releasing JDBC resources
+2022-11-12 03:50:33 - Closing logical connection
+2022-11-12 03:50:33 - Logical connection closed
+2022-11-12 03:50:33 - Finished creation of repository instance for com.encom.msuser.repository.RoleRepository.
+2022-11-12 03:50:33 - Opening Hibernate Session.  tenant=null
+2022-11-12 03:50:33 - Opened Session [0cf99e62-713e-4e58-9638-95a0de0c8e88] at timestamp: 1668210633967
+2022-11-12 03:50:33 - Closing session [0cf99e62-713e-4e58-9638-95a0de0c8e88]
+2022-11-12 03:50:33 - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@25e8a111]
+2022-11-12 03:50:33 - Releasing JDBC resources
+2022-11-12 03:50:33 - Closing logical connection
+2022-11-12 03:50:33 - Logical connection closed
+2022-11-12 03:50:33 - Initializing repository instance for com.encom.msuser.repository.UserRepository…
+2022-11-12 03:50:33 - Opening Hibernate Session.  tenant=null
+2022-11-12 03:50:33 - Opened Session [9bd16553-6c1a-438e-aa05-fb9b77ae5733] at timestamp: 1668210633970
+2022-11-12 03:50:33 - Closing session [9bd16553-6c1a-438e-aa05-fb9b77ae5733]
+2022-11-12 03:50:33 - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@331ad6eb]
+2022-11-12 03:50:33 - Releasing JDBC resources
+2022-11-12 03:50:33 - Closing logical connection
+2022-11-12 03:50:33 - Logical connection closed
+2022-11-12 03:50:33 - Finished creation of repository instance for com.encom.msuser.repository.UserRepository.
+2022-11-12 03:50:34 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 03:50:34 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-12 03:50:34 - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-12 03:50:34 - Started MsUserApplication in 3.344 seconds (JVM running for 3.847)
+2022-11-12 03:50:35 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 03:50:35 - Initializing Servlet 'dispatcherServlet'
+2022-11-12 03:50:35 - Completed initialization in 1 ms
+2022-11-12 03:50:42 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 03:50:42 - HHH000031: Closing
+2022-11-12 03:50:42 - Cleaning QueryPlan Cache
+2022-11-12 03:50:42 - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@2336cd91] for TypeConfiguration
+2022-11-12 03:50:42 - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@12ef9634] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@2336cd91]
+2022-11-12 03:50:42 - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2022-11-12 03:50:42 - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2022-11-12 03:50:42 - HikariUserCP - Shutdown initiated...
+2022-11-12 03:50:42 - HikariUserCP - Shutdown completed.

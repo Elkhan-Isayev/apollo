@@ -1,6 +1,5 @@
 package com.encom.msuser.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,9 +9,13 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
-import java.util.HashSet;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -20,8 +23,8 @@ import java.util.Set;
 @Data
 @Builder
 @Entity
-@Table(name="groups")
-public class Group {
+@Table(name="privileges")
+public class Privilege {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
@@ -32,15 +35,11 @@ public class Group {
 
     private String description;
 
-    @ManyToMany
-    @JsonIgnore
-    Set<User> users = new HashSet<>();
+    @OneToMany(mappedBy = "privilege")
+    Set<GroupPrivilege> privilegeGroups;
 
-//    @OneToMany(mappedBy = "group")
-//    Set<UserGroup> groupUsers;
-//
-//    @OneToMany(mappedBy = "group")
-//    Set<GroupPrivilege> groupPrivileges;
+    @OneToMany(mappedBy = "privilege")
+    Set<UserPrivilege> privilegeUsers;
 
     @Column(name = "created_at")
     @CreationTimestamp

@@ -1,6 +1,5 @@
 package com.encom.msuser.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,37 +9,35 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
 @Entity
-@Table(name="groups")
-public class Group {
+@Table(name="user_group")
+public class UserGroup {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(name = "id", columnDefinition = "VARCHAR(255)")
     private String id;
 
-    private String name;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    User user;
 
-    private String description;
-
-    @ManyToMany
-    @JsonIgnore
-    Set<User> users = new HashSet<>();
-
-//    @OneToMany(mappedBy = "group")
-//    Set<UserGroup> groupUsers;
-//
-//    @OneToMany(mappedBy = "group")
-//    Set<GroupPrivilege> groupPrivileges;
+    @ManyToOne
+    @JoinColumn(name = "group_id")
+    Group group;
 
     @Column(name = "created_at")
     @CreationTimestamp

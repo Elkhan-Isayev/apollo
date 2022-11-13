@@ -1,9 +1,15 @@
 package com.encom.msuser.service;
 
 import com.encom.msuser.exception.NotFoundException;
+import com.encom.msuser.mapper.GroupMapper;
 import com.encom.msuser.mapper.UserMapper;
+import com.encom.msuser.model.dto.GroupDto;
 import com.encom.msuser.model.dto.UserDto;
+import com.encom.msuser.model.entity.Group;
 import com.encom.msuser.model.entity.User;
+import com.encom.msuser.model.entity.UserGroup;
+import com.encom.msuser.repository.GroupRepository;
+import com.encom.msuser.repository.UserGroupRepository;
 import com.encom.msuser.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -13,12 +19,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
+    private final GroupRepository groupRepository;
+
     private final UserMapper userMapper = UserMapper.INSTANCE;
+    private final GroupMapper groupMapper = GroupMapper.INSTANCE;
 
     public ResponseEntity<List<UserDto>> getAllUsers(int page, int size) {
         List<User> users = new ArrayList<>();
@@ -85,5 +96,27 @@ public class UserService {
         userRepository.deleteById(id);
 
         return new ResponseEntity(null, HttpStatus.OK);
+    }
+
+    public ResponseEntity<List<GroupDto>> getUserGroups(String id) {
+        if (!userRepository.existsById(id)) {
+            throw new NotFoundException(String.format("service.getUserGroups id = %s", id));
+        }
+        List<Group> groups = new ArrayList<>();
+
+//        userRepository.findById(id).orElse(null)
+//                .getUserGroups()
+//                .stream()
+//                .forEach(userGroup -> groups.add(userGroup.getGroup()));
+//
+//        groupRepository.findGroups
+
+        if (groups.isEmpty()) {
+            throw new NotFoundException(String.format("service.getUserGroups id = %s, userGroups is empty", id));
+        }
+
+        List<GroupDto> groupDtoList = groupMapper.mapToGroupDtoList(groups);
+
+        return new ResponseEntity(groupDtoList, HttpStatus.OK);
     }
 }
