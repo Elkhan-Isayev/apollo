@@ -24,51 +24,51 @@ public class PrivilegeController {
     private final PrivilegeService privilegeService;
 
     @GetMapping
-    public ResponseEntity<List<PrivilegeDto>> getAllRoles(@RequestParam(value="page", defaultValue="1") int page,
+    public ResponseEntity<List<PrivilegeDto>> getAllPrivileges(@RequestParam(value="page", defaultValue="1") int page,
                                                           @RequestParam(value="size", defaultValue="10") int size) {
         if (page <= 0 || size <= 0) {
-            throw new BadRequestException(String.format("controller.getAllRoles page = %s size = %s", page, size));
+            throw new BadRequestException(String.format("controller.getAllPrivileges page = %s size = %s", page, size));
         }
-        return privilegeService.getAllRoles(page, size);
+        return privilegeService.getAllPrivileges(page, size);
     }
 
     @GetMapping("/count")
-    public ResponseEntity<Long> getAllRolesCount() {
-        return privilegeService.getAllRolesCount();
+    public ResponseEntity<Long> getAllPrivilegesCount() {
+        return privilegeService.getAllPrivilegesCount();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PrivilegeDto> getRoleById(@PathVariable String id) {
+    public ResponseEntity<PrivilegeDto> getPrivilegeById(@PathVariable String id) {
         if (id.isEmpty()) {
-            throw new BadRequestException(String.format("controller.getRoleById"));
+            throw new BadRequestException(String.format("controller.getPrivilegeById"));
         }
-        return privilegeService.getRoleById(id);
+        return privilegeService.getPrivilegeById(id);
     }
 
     @PostMapping
-    public ResponseEntity<PrivilegeDto> createNewRole(@RequestBody PrivilegeDto privilegeDto) {
+    public ResponseEntity<PrivilegeDto> createNewPrivilege(@RequestBody PrivilegeDto privilegeDto) {
         if (privilegeDto == null ||
                 privilegeDto.getName().isEmpty() ||
                 privilegeDto.getDescription().isEmpty()) {
-            throw new BadRequestException(String.format("controller.createNewRole body = %s", privilegeDto));
+            throw new BadRequestException(String.format("controller.createNewPrivilege body = %s", privilegeDto));
         }
-        return privilegeService.createNewRole(privilegeDto);
+        return privilegeService.createNewPrivilege(privilegeDto);
     }
 
     @PutMapping
-    public ResponseEntity<PrivilegeDto> updateRole(@RequestBody PrivilegeDto privilegeDto) {
+    public ResponseEntity<PrivilegeDto> updatePrivilege(@RequestBody PrivilegeDto privilegeDto) {
         if (privilegeDto == null ||
                 privilegeDto.getId().isEmpty()) {
-            throw new BadRequestException(String.format("controller.updateRole body = %s", privilegeDto));
+            throw new BadRequestException(String.format("controller.updatePrivilege body = %s", privilegeDto));
         }
-        return privilegeService.updateRole(privilegeDto);
+        return privilegeService.updatePrivilege(privilegeDto);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<PrivilegeDto> deleteRole(@PathVariable String id) {
+    public ResponseEntity<PrivilegeDto> deletePrivilege(@PathVariable String id) {
         if (id.isEmpty()) {
-            throw new BadRequestException(String.format("controller.deleteRole"));
+            throw new BadRequestException(String.format("controller.deletePrivilege"));
         }
-        return privilegeService.deleteRole(id);
+        return privilegeService.deletePrivilege(id);
     }
 }

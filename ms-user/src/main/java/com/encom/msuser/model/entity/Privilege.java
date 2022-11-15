@@ -1,7 +1,6 @@
 package com.encom.msuser.model.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -9,19 +8,14 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Builder
 @Entity
 @Table(name="privileges")
 public class Privilege {
@@ -35,6 +29,11 @@ public class Privilege {
 
     private String description;
 
+    @ManyToMany(mappedBy = "privileges")
+    List<User> users = new ArrayList<>();
+
+    @ManyToMany(mappedBy = "privileges")
+    List<Group> groups = new ArrayList<>();
 
     @Column(name = "created_at")
     @CreationTimestamp

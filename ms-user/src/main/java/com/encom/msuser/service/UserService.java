@@ -119,22 +119,19 @@ public class UserService {
     }
 
     public ResponseEntity addUserGroup(String userId, GroupDto groupDto) {
-        if (!userRepository.existsById(userId) || !groupRepository.existsById(groupDto.getId())) {
-            throw new BadRequestException(String.format("service.addUserGroup userId = %s, groupId = %s", userId, groupDto.getId()));
-        }
         User user = userRepository.findById(userId).orElse(null);
         Group group = groupRepository.findById(groupDto.getId()).orElse(null);
-        Set<Group> userGroups = user.getGroups();
+        if (user == null || group == null) {
+            throw new BadRequestException(String.format("service.addUserGroup userId = %s, groupId = %s", userId, groupDto.getId()));
+        }
 
-        
-
+        List<Group> userGroups = user.getGroups();
         if (userGroups.contains(group)) {
             throw new BadRequestException(String.format("service.addUserGroup groupId = %s already exist for userId = %s", group.getId(), userId));
         }
 
         userGroups.add(group);
         user.setGroups(userGroups);
-
         userRepository.save(user);
 
         return new ResponseEntity(null, HttpStatus.CREATED);

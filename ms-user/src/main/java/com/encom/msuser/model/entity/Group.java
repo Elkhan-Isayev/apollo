@@ -1,8 +1,6 @@
 package com.encom.msuser.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -12,13 +10,12 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Builder
 @Entity
 @Table(name="groups")
 public class Group {
@@ -33,7 +30,14 @@ public class Group {
     private String description;
 
     @ManyToMany(mappedBy = "groups")
-    Set<User> users;
+    List<User> users = new ArrayList<>();
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "group_privilege",
+            joinColumns = @JoinColumn(name = "group_id"),
+            inverseJoinColumns = @JoinColumn(name = "privilege_id"))
+    List<Privilege> privileges = new ArrayList<>();
 
     @Column(name = "created_at")
     @CreationTimestamp
