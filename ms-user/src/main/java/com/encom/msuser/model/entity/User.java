@@ -36,7 +36,11 @@ public class User {
 
     private String email;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY,
+        cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+        })
     @JoinTable(
             name = "user_group",
             joinColumns = @JoinColumn(name = "user_id"),

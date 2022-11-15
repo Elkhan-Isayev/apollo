@@ -83,4 +83,14 @@ public class UserController {
         }
         return userService.getUserGroups(id);
     }
+
+    @PostMapping("/{id}/groups")
+    public ResponseEntity addUserGroup(@PathVariable String id, @RequestBody GroupDto groupDto) {
+        if (id.isEmpty() ||
+                groupDto == null ||
+                groupDto.getId().isEmpty()) {
+            throw new BadRequestException(String.format("controller.addUserGroup"));
+        }
+        return userService.addUserGroup(id, groupDto);
+    }
 }

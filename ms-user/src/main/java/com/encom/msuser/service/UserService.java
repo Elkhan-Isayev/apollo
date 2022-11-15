@@ -1,5 +1,6 @@
 package com.encom.msuser.service;
 
+import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.exception.NotFoundException;
 import com.encom.msuser.mapper.GroupMapper;
 import com.encom.msuser.mapper.UserMapper;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -114,5 +116,27 @@ public class UserService {
         List<GroupDto> groupDtoList = groupMapper.mapToGroupDtoList(groups);
 
         return new ResponseEntity(groupDtoList, HttpStatus.OK);
+    }
+
+    public ResponseEntity addUserGroup(String userId, GroupDto groupDto) {
+        if (!userRepository.existsById(userId) || !groupRepository.existsById(groupDto.getId())) {
+            throw new BadRequestException(String.format("service.addUserGroup userId = %s, groupId = %s", userId, groupDto.getId()));
+        }
+        User user = userRepository.findById(userId).orElse(null);
+        Group group = groupRepository.findById(groupDto.getId()).orElse(null);
+        Set<Group> userGroups = user.getGroups();
+
+        
+
+        if (userGroups.contains(group)) {
+            throw new BadRequestException(String.format("service.addUserGroup groupId = %s already exist for userId = %s", group.getId(), userId));
+        }
+
+        userGroups.add(group);
+        user.setGroups(userGroups);
+
+        userRepository.save(user);
+
+        return new ResponseEntity(null, HttpStatus.CREATED);
     }
 }

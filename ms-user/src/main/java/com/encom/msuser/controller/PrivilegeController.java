@@ -2,7 +2,7 @@ package com.encom.msuser.controller;
 
 import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.model.dto.PrivilegeDto;
-import com.encom.msuser.service.RoleService;
+import com.encom.msuser.service.PrivilegeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,9 +19,9 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(path = "/roles")
-public class RoleController {
-    private final RoleService roleService;
+@RequestMapping(path = "/privileges")
+public class PrivilegeController {
+    private final PrivilegeService privilegeService;
 
     @GetMapping
     public ResponseEntity<List<PrivilegeDto>> getAllRoles(@RequestParam(value="page", defaultValue="1") int page,
@@ -29,12 +29,12 @@ public class RoleController {
         if (page <= 0 || size <= 0) {
             throw new BadRequestException(String.format("controller.getAllRoles page = %s size = %s", page, size));
         }
-        return roleService.getAllRoles(page, size);
+        return privilegeService.getAllRoles(page, size);
     }
 
     @GetMapping("/count")
     public ResponseEntity<Long> getAllRolesCount() {
-        return roleService.getAllRolesCount();
+        return privilegeService.getAllRolesCount();
     }
 
     @GetMapping("/{id}")
@@ -42,7 +42,7 @@ public class RoleController {
         if (id.isEmpty()) {
             throw new BadRequestException(String.format("controller.getRoleById"));
         }
-        return roleService.getRoleById(id);
+        return privilegeService.getRoleById(id);
     }
 
     @PostMapping
@@ -52,7 +52,7 @@ public class RoleController {
                 privilegeDto.getDescription().isEmpty()) {
             throw new BadRequestException(String.format("controller.createNewRole body = %s", privilegeDto));
         }
-        return roleService.createNewRole(privilegeDto);
+        return privilegeService.createNewRole(privilegeDto);
     }
 
     @PutMapping
@@ -61,7 +61,7 @@ public class RoleController {
                 privilegeDto.getId().isEmpty()) {
             throw new BadRequestException(String.format("controller.updateRole body = %s", privilegeDto));
         }
-        return roleService.updateRole(privilegeDto);
+        return privilegeService.updateRole(privilegeDto);
     }
 
     @DeleteMapping("/{id}")
@@ -69,6 +69,6 @@ public class RoleController {
         if (id.isEmpty()) {
             throw new BadRequestException(String.format("controller.deleteRole"));
         }
-        return roleService.deleteRole(id);
+        return privilegeService.deleteRole(id);
     }
 }
