@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+
+  ms-user:
+    image: rinsler/apollo-ms-user
+    container_name: ms-user
+    depends_on:
+      - postgres
+    ports: 
+      - 8085:8080
+    restart: 
+      unless-stopped
+    environment:
+      - DB_POSTGRE_HOST=
+      - DB_POSTGRE_PORT=
+      - DB_POSTGRE_USERNAME=
+      - DB_POSTGRE_PASSWORD=
+    networks:
+      - apollo
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=account_db
+    ports:
+      - 8001:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    network:
+      - apollo
+
+networks:
+  apollo:
+    driver: bridge
