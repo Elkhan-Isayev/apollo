@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: ms-faq
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active:
+      - db
+      - logger

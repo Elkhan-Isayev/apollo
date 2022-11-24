@@ -1,24 +1,34 @@
 package com.encom.msuser.service;
 
+import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.exception.NotFoundException;
+import com.encom.msuser.mapper.GroupMapper;
 import com.encom.msuser.mapper.UserMapper;
+import com.encom.msuser.model.dto.GroupDto;
 import com.encom.msuser.model.dto.UserDto;
+import com.encom.msuser.model.entity.Group;
 import com.encom.msuser.model.entity.User;
+import com.encom.msuser.repository.GroupRepository;
 import com.encom.msuser.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class UserService {
     private final UserRepository userRepository;
+    private final GroupRepository groupRepository;
+
     private final UserMapper userMapper = UserMapper.INSTANCE;
+    private final GroupMapper groupMapper = GroupMapper.INSTANCE;
 
     public ResponseEntity<List<UserDto>> getAllUsers(int page, int size) {
         List<User> users = new ArrayList<>();
@@ -85,5 +95,46 @@ public class UserService {
         userRepository.deleteById(id);
 
         return new ResponseEntity(null, HttpStatus.OK);
+    }
+
+    public ResponseEntity<List<GroupDto>> getUserGroups(String id) {
+        if (!userRepository.existsById(id)) {
+            throw new NotFoundException(String.format("service.getUserGroups id = %s", id));
+        }
+
+        List<Group> groups = new ArrayList<>();
+        userRepository
+                .findById(id)
+                .orElse(null)
+                .getGroups()
+                .stream()
+                .forEach(group -> groups.add(group));
+
+        if (groups.isEmpty()) {
+            throw new NotFoundException(String.format("service.getUserGroups id = %s, userGroups is empty", id));
+        }
+
+        List<GroupDto> groupDtoList = groupMapper.mapToGroupDtoList(groups);
+
+        return new ResponseEntity(groupDtoList, HttpStatus.OK);
+    }
+
+    public ResponseEntity addUserGroup(String userId, GroupDto groupDto) {
+        User user = userRepository.findById(userId).orElse(null);
+        Group group = groupRepository.findById(groupDto.getId()).orElse(null);
+        if (user == null || group == null) {
+            throw new BadRequestException(String.format("service.addUserGroup userId = %s, groupId = %s", userId, groupDto.getId()));
+        }
+
+        List<Group> userGroups = user.getGroups();
+        if (userGroups.contains(group)) {
+            throw new BadRequestException(String.format("service.addUserGroup groupId = %s already exist for userId = %s", group.getId(), userId));
+        }
+
+        userGroups.add(group);
+        user.setGroups(userGroups);
+        userRepository.save(user);
+
+        return new ResponseEntity(null, HttpStatus.CREATED);
     }
 }

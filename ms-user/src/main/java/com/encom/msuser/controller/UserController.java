@@ -1,6 +1,7 @@
 package com.encom.msuser.controller;
 
 import com.encom.msuser.exception.BadRequestException;
+import com.encom.msuser.model.dto.GroupDto;
 import com.encom.msuser.model.dto.UserDto;
 import com.encom.msuser.service.UserService;;
 import lombok.RequiredArgsConstructor;
@@ -73,5 +74,23 @@ public class UserController {
             throw new BadRequestException(String.format("controller.deleteUser"));
         }
         return userService.deleteUser(id);
+    }
+
+    @GetMapping("/{id}/groups")
+    public ResponseEntity<List<GroupDto>> getUserGroups(@PathVariable String id) {
+        if (id.isEmpty()) {
+            throw new BadRequestException(String.format("controller.getUserGroups"));
+        }
+        return userService.getUserGroups(id);
+    }
+
+    @PostMapping("/{id}/groups")
+    public ResponseEntity addUserGroup(@PathVariable String id, @RequestBody GroupDto groupDto) {
+        if (id.isEmpty() ||
+                groupDto == null ||
+                groupDto.getId().isEmpty()) {
+            throw new BadRequestException(String.format("controller.addUserGroup"));
+        }
+        return userService.addUserGroup(id, groupDto);
     }
 }
