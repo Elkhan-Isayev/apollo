@@ -1,5 +1,6 @@
 package com.encom.msuser.exception;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.boot.web.error.ErrorAttributeOptions;
@@ -13,12 +14,33 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.context.request.WebRequest;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
 @RestControllerAdvice
 public class ExceptionHook extends DefaultErrorAttributes {
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<Map<String, Object>> handle(Exception exception,
+                                                      WebRequest request) {
+        log.error("Uncaught exception: {}", exception.getStackTrace());
+        return ofType(request, HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
+    }
+
+    @ExceptionHandler(SQLException.class)
+    public ResponseEntity<Map<String, Object>> handle(SQLException exception,
+                                                      WebRequest request) {
+        log.error("Uncaught SQL exception: {}", exception.getStackTrace());
+        return ofType(request, HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
+    }
+
+    @ExceptionHandler(JsonProcessingException.class)
+    public ResponseEntity<Map<String, Object>> handle(JsonProcessingException exception,
+                                                      WebRequest request) {
+        log.error("Uncaught JsonProcessing exception: {}", exception.getStackTrace());
+        return ofType(request, HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
+    }
 
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<Map<String, Object>> handle(NotFoundException exception,
@@ -45,7 +67,8 @@ public class ExceptionHook extends DefaultErrorAttributes {
     public ResponseEntity<Map<String, Object>> handleValidationExceptions(
             MethodArgumentNotValidException exception,
             WebRequest request) {
-        log.info("Validation exception: {}", exception.getMessage());
+        log.error("Validation exception: {}", exception.getMessage());
+
         Map<String, String> errors = new HashMap<>();
         exception.getBindingResult().getAllErrors().forEach((error) -> {
             String fieldName = ((FieldError) error).getField();

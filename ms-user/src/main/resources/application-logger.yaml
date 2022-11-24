@@ -2,9 +2,9 @@ logging:
   file:
     path: logs/msuser/
   level:
-    '[org.springframework.data]': TRACE
-    '[org.hibernate]': TRACE
-    '[javax.persistence]': TRACE
+#    '[org.springframework.data]': TRACE
+#    '[org.hibernate]': TRACE
+#    '[javax.persistence]': TRACE
     root: info
 
   pattern:
