@@ -1,5 +1,6 @@
 package com.encom.msuser.service;
 
+import com.encom.msuser.configuration.annotation.LogExecutionTime;
 import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.exception.NotFoundException;
 import com.encom.msuser.mapper.GroupMapper;
@@ -30,6 +31,7 @@ public class UserService {
     private final UserMapper userMapper = UserMapper.INSTANCE;
     private final GroupMapper groupMapper = GroupMapper.INSTANCE;
 
+    @LogExecutionTime
     public ResponseEntity<List<UserDto>> getAllUsers(int page, int size) {
         List<User> users = new ArrayList<>();
 
@@ -43,12 +45,14 @@ public class UserService {
         return new ResponseEntity<>(userDtoList, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<Long> getAllUsersCount() {
         long count = userRepository.count();
 
         return new ResponseEntity<>(count, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<UserDto> getUserById(String id) {
         User user = userRepository.findById(id).orElse(null);
         if (user == null) {
@@ -60,6 +64,7 @@ public class UserService {
         return new ResponseEntity<>(userDto, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<UserDto> createNewUser(UserDto userDto) {
         User user = userMapper.mapToUser(userDto);
 
@@ -70,6 +75,7 @@ public class UserService {
         return new ResponseEntity<>(createdUserDto, HttpStatus.CREATED);
     }
 
+    @LogExecutionTime
     public ResponseEntity<UserDto> updateUser(UserDto userDto) {
         User user = userRepository.findById(userDto.getId()).orElse(null);
         if (user == null) {
@@ -87,6 +93,7 @@ public class UserService {
         return new ResponseEntity<>(changedUserDto, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity deleteUser(String id) {
         if (!userRepository.existsById(id)) {
             throw new NotFoundException(String.format("service.deleteUser id = %s", id));
@@ -97,6 +104,7 @@ public class UserService {
         return new ResponseEntity(null, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<List<GroupDto>> getUserGroups(String id) {
         if (!userRepository.existsById(id)) {
             throw new NotFoundException(String.format("service.getUserGroups id = %s", id));
@@ -119,6 +127,7 @@ public class UserService {
         return new ResponseEntity(groupDtoList, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity addUserGroup(String userId, GroupDto groupDto) {
         User user = userRepository.findById(userId).orElse(null);
         Group group = groupRepository.findById(groupDto.getId()).orElse(null);

@@ -1,5 +1,6 @@
 package com.encom.msuser.service;
 
+import com.encom.msuser.configuration.annotation.LogExecutionTime;
 import com.encom.msuser.exception.NotFoundException;
 import com.encom.msuser.mapper.GroupMapper;
 import com.encom.msuser.model.dto.GroupDto;
@@ -22,6 +23,7 @@ public class GroupService {
     private final GroupRepository groupRepository;
     private final GroupMapper groupMapper = GroupMapper.INSTANCE;
 
+    @LogExecutionTime
     public ResponseEntity<List<GroupDto>> getAllGroups(int page, int size) {
         List<Group> groups = new ArrayList<>();
 
@@ -35,12 +37,14 @@ public class GroupService {
         return new ResponseEntity<>(groupDtoList, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<Long> getAllGroupsCount() {
         long count = groupRepository.count();
 
         return new ResponseEntity<>(count, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<GroupDto> getGroupById(String id) {
         Group group = groupRepository.findById(id).orElse(null);
         if (group == null) {
@@ -52,6 +56,7 @@ public class GroupService {
         return new ResponseEntity<>(groupDto, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<GroupDto> createNewGroup(GroupDto groupDto) {
         Group group = groupMapper.mapToGroup(groupDto);
 
@@ -62,6 +67,7 @@ public class GroupService {
         return new ResponseEntity<>(createdGroupDto, HttpStatus.CREATED);
     }
 
+    @LogExecutionTime
     public ResponseEntity<GroupDto> updateGroup(GroupDto groupDto) {
         Group group = groupRepository.findById(groupDto.getId()).orElse(null);
         if (group == null) {
@@ -78,6 +84,7 @@ public class GroupService {
         return new ResponseEntity<>(changedGroupDto, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity deleteGroup(String id) {
         if (!groupRepository.existsById(id)) {
             throw new NotFoundException(String.format("service.deleteGroup id = %s", id));

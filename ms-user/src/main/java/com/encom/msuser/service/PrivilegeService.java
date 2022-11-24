@@ -1,5 +1,6 @@
 package com.encom.msuser.service;
 
+import com.encom.msuser.configuration.annotation.LogExecutionTime;
 import com.encom.msuser.exception.NotFoundException;
 import com.encom.msuser.mapper.PrivilegeMapper;
 import com.encom.msuser.model.dto.PrivilegeDto;
@@ -22,6 +23,7 @@ public class PrivilegeService {
     private final PrivilegeRepository privilegeRepository;
     private final PrivilegeMapper privilegeMapper = PrivilegeMapper.INSTANCE;
 
+    @LogExecutionTime
     public ResponseEntity<List<PrivilegeDto>> getAllPrivileges(int page, int size) {
         List<Privilege> privileges = new ArrayList<>();
 
@@ -35,11 +37,13 @@ public class PrivilegeService {
         return new ResponseEntity<>(privilegeDtoList, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<Long> getAllPrivilegesCount() {
         long count = privilegeRepository.count();
         return new ResponseEntity<>(count, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<PrivilegeDto> getPrivilegeById(String id) {
         Privilege privilege = privilegeRepository.findById(id).orElse(null);
         if (privilege == null) {
@@ -51,6 +55,7 @@ public class PrivilegeService {
         return new ResponseEntity<>(privilegeDto, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity<PrivilegeDto> createNewPrivilege(PrivilegeDto privilegeDto) {
         Privilege privilege = privilegeMapper.mapToPrivilege(privilegeDto);
 
@@ -61,6 +66,7 @@ public class PrivilegeService {
         return new ResponseEntity<>(createdPrivilegeDto, HttpStatus.CREATED);
     }
 
+    @LogExecutionTime
     public ResponseEntity<PrivilegeDto> updatePrivilege(PrivilegeDto privilegeDto) {
         Privilege privilege = privilegeRepository.findById(privilegeDto.getId()).orElse(null);
         if (privilege == null) {
@@ -77,6 +83,7 @@ public class PrivilegeService {
         return new ResponseEntity<>(changedPrivilegeDto, HttpStatus.OK);
     }
 
+    @LogExecutionTime
     public ResponseEntity deletePrivilege(String id) {
         if (!privilegeRepository.existsById(id)) {
             throw new NotFoundException(String.format("service.deletePrivilege id = %s", id));

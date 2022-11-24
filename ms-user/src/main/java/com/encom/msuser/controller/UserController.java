@@ -1,5 +1,6 @@
 package com.encom.msuser.controller;
 
+import com.encom.msuser.configuration.annotation.LogExecutionTime;
 import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.model.dto.GroupDto;
 import com.encom.msuser.model.dto.UserDto;
