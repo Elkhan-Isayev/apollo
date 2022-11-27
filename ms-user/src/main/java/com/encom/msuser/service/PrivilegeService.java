@@ -18,7 +18,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 public class PrivilegeService {
     private final PrivilegeRepository privilegeRepository;
     private final PrivilegeMapper privilegeMapper = PrivilegeMapper.INSTANCE;

@@ -13,17 +13,14 @@ import com.encom.msuser.repository.GroupRepository;
 import com.encom.msuser.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 public class UserService {
     private final UserRepository userRepository;
     private final GroupRepository groupRepository;
@@ -32,118 +29,111 @@ public class UserService {
     private final GroupMapper groupMapper = GroupMapper.INSTANCE;
 
     @LogExecutionTime
-    public ResponseEntity<List<UserDto>> getAllUsers(int page, int size) {
+    public List<UserDto> getAllUsers(int page, int size) {
         List<User> users = new ArrayList<>();
 
-        userRepository.findAll(PageRequest.of(page - 1, size)).forEach(users::add);
+        userRepository.findAll(PageRequest.of(page - 1, size))
+                .forEach(users::add);
+
         if (users.isEmpty()) {
             throw new NotFoundException(String.format("service.getAllUsers page = %s and size = %s", page, size));
         }
 
-        List<UserDto> userDtoList = userMapper.mapToUserDtoList(users);
-
-        return new ResponseEntity<>(userDtoList, HttpStatus.OK);
+        return userMapper.mapToUserDtoList(users);
     }
 
     @LogExecutionTime
-    public ResponseEntity<Long> getAllUsersCount() {
-        long count = userRepository.count();
-
-        return new ResponseEntity<>(count, HttpStatus.OK);
+    public Long getAllUsersCount() {
+        var count = userRepository.count();
+        return count;
     }
 
     @LogExecutionTime
-    public ResponseEntity<UserDto> getUserById(String id) {
-        User user = userRepository.findById(id).orElse(null);
-        if (user == null) {
-            throw new NotFoundException(String.format("service.getUserById id = %s", id));
-        }
-
-        UserDto userDto = userMapper.mapToUserDto(user);
-
-        return new ResponseEntity<>(userDto, HttpStatus.OK);
+    public UserDto getUserById(String id) {
+        var user = userRepository.findById(id).orElseThrow(() -> new NotFoundException(String.format("service.getUserById id = %s", id)));
+        return userMapper.mapToUserDto(user);
     }
 
     @LogExecutionTime
-    public ResponseEntity<UserDto> createNewUser(UserDto userDto) {
-        User user = userMapper.mapToUser(userDto);
+    public UserDto createNewUser(UserDto userDto) {
+        var user = userMapper.mapToUser(userDto);
 
-        User createdUser = userRepository.save(user);
+        var createdUser = userRepository.save(user);
 
-        UserDto createdUserDto = userMapper.mapToUserDto(createdUser);
-
-        return new ResponseEntity<>(createdUserDto, HttpStatus.CREATED);
+        return userMapper.mapToUserDto(createdUser);
     }
 
     @LogExecutionTime
-    public ResponseEntity<UserDto> updateUser(UserDto userDto) {
-        User user = userRepository.findById(userDto.getId()).orElse(null);
-        if (user == null) {
-            throw new NotFoundException(String.format("service.updateUser id = %s", userDto.getId()));
-        }
+    public UserDto updateUser(UserDto userDto) {
+        var user = userRepository.findById(userDto.getId())
+                .orElseThrow(() -> new NotFoundException(String.format("service.updateUser id = %s", userDto.getId())));
 
         user.setUsername(userDto.getUsername());
         user.setName(userDto.getName());
         user.setSurname(userDto.getSurname());
         user.setEmail(userDto.getEmail());
-        User changedUser = userRepository.save(user);
+        var changedUser = userRepository.save(user);
 
-        UserDto changedUserDto = userMapper.mapToUserDto(changedUser);
-
-        return new ResponseEntity<>(changedUserDto, HttpStatus.OK);
+        return userMapper.mapToUserDto(changedUser);
     }
 
     @LogExecutionTime
-    public ResponseEntity deleteUser(String id) {
+    public void deleteUser(String id) {
         if (!userRepository.existsById(id)) {
             throw new NotFoundException(String.format("service.deleteUser id = %s", id));
         }
-
         userRepository.deleteById(id);
-
-        return new ResponseEntity(null, HttpStatus.OK);
     }
 
     @LogExecutionTime
-    public ResponseEntity<List<GroupDto>> getUserGroups(String id) {
-        if (!userRepository.existsById(id)) {
-            throw new NotFoundException(String.format("service.getUserGroups id = %s", id));
-        }
+    public List<GroupDto> getUserGroups(String id) {
+        List<Group> groups = userRepository.findById(id)
+                .orElseThrow(() -> new BadRequestException(String.format("service.getUserGroups id = %s user does not exist", id)))
+                .getGroups();
 
-        List<Group> groups = new ArrayList<>();
-        userRepository
-                .findById(id)
-                .orElse(null)
-                .getGroups()
-                .stream()
-                .forEach(group -> groups.add(group));
-
-        if (groups.isEmpty()) {
+        if (CollectionUtils.isEmpty(groups)) {
             throw new NotFoundException(String.format("service.getUserGroups id = %s, userGroups is empty", id));
         }
 
-        List<GroupDto> groupDtoList = groupMapper.mapToGroupDtoList(groups);
-
-        return new ResponseEntity(groupDtoList, HttpStatus.OK);
+        return groupMapper.mapToGroupDtoList(groups);
     }
 
     @LogExecutionTime
-    public ResponseEntity addUserGroup(String userId, GroupDto groupDto) {
-        User user = userRepository.findById(userId).orElse(null);
-        Group group = groupRepository.findById(groupDto.getId()).orElse(null);
-        if (user == null || group == null) {
-            throw new BadRequestException(String.format("service.addUserGroup userId = %s, groupId = %s", userId, groupDto.getId()));
-        }
+    public void addUserGroup(String userId, String groupId) {
+        var user = userRepository.findById(userId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.addUserGroup userId = %s", userId)));
+        var group = groupRepository.findById(groupId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.addUserGroup groupId = %s", groupId)));
 
-        List<Group> userGroups = user.getGroups();
-        if (userGroups.contains(group)) {
-            throw new BadRequestException(String.format("service.addUserGroup groupId = %s already exist for userId = %s", group.getId(), userId));
-        }
+        user.getGroups()
+                .stream()
+                .filter(perGroup -> group == perGroup)
+                .findFirst()
+                .ifPresentOrElse(
+                        (presentGroup) -> {
+                            throw new BadRequestException(String.format("service.addUserGroup groupId = %s already exist for userId = %s", presentGroup.getId(), userId));
+                        },
+                        () -> {
+                            user.getGroups().add(group);
+                            userRepository.save(user);
+                        }
+                );
+    }
 
-        userGroups.add(group);
-        user.setGroups(userGroups);
+    @LogExecutionTime
+    public void deleteUserGroup(String userId, String groupId) {
+        var user = userRepository.findById(userId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.deleteUserGroup userId = %s", userId)));
+        var group = groupRepository.findById(groupId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.deleteUserGroup groupId = %s", groupId)));
+
+        user.getGroups()
+                .stream()
+                .filter(perGroup -> perGroup == group)
+                .findAny()
+                .orElseThrow(() -> new NotFoundException(String.format("service.deleteUserGroup groupId = %s does not exist for userId = %s", groupId, userId)));
+
+        user.getGroups().remove(group);
         userRepository.save(user);
-
-        return new ResponseEntity(null, HttpStatus.CREATED);
     }
 }

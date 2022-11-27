@@ -18,7 +18,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 public class GroupService {
     private final GroupRepository groupRepository;
     private final GroupMapper groupMapper = GroupMapper.INSTANCE;
