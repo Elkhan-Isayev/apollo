@@ -8,10 +8,7 @@ import com.encom.msuser.model.entity.Privilege;
 import com.encom.msuser.repository.PrivilegeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,73 +20,48 @@ public class PrivilegeService {
     private final PrivilegeMapper privilegeMapper = PrivilegeMapper.INSTANCE;
 
     @LogExecutionTime
-    public ResponseEntity<List<PrivilegeDto>> getAllPrivileges(int page, int size) {
+    public List<PrivilegeDto> getAllPrivileges(int page, int size) {
         List<Privilege> privileges = new ArrayList<>();
-
         privilegeRepository.findAll(PageRequest.of(page - 1, size)).forEach(privileges::add);
         if (privileges.isEmpty()) {
             throw new NotFoundException(String.format("service.getAllPrivileges page = %s and size = %s", page, size));
         }
-
-        List<PrivilegeDto> privilegeDtoList = privilegeMapper.mapToPrivilegeDtoList(privileges);
-
-        return new ResponseEntity<>(privilegeDtoList, HttpStatus.OK);
+        return privilegeMapper.mapToPrivilegeDtoList(privileges);
     }
 
     @LogExecutionTime
-    public ResponseEntity<Long> getAllPrivilegesCount() {
+    public Long getAllPrivilegesCount() {
         long count = privilegeRepository.count();
-        return new ResponseEntity<>(count, HttpStatus.OK);
+        return count;
     }
 
     @LogExecutionTime
-    public ResponseEntity<PrivilegeDto> getPrivilegeById(String id) {
-        Privilege privilege = privilegeRepository.findById(id).orElse(null);
-        if (privilege == null) {
-            throw new NotFoundException(String.format("service.getPrivilegeById id = %s", id));
-        }
-
-        PrivilegeDto privilegeDto = privilegeMapper.mapToPrivilegeDto(privilege);
-
-        return new ResponseEntity<>(privilegeDto, HttpStatus.OK);
+    public PrivilegeDto getPrivilegeById(String id) {
+        var privilege = privilegeRepository.findById(id).orElseThrow(() -> new NotFoundException(String.format("service.getPrivilegeById id = %s", id)));
+        return privilegeMapper.mapToPrivilegeDto(privilege);
     }
 
     @LogExecutionTime
-    public ResponseEntity<PrivilegeDto> createNewPrivilege(PrivilegeDto privilegeDto) {
-        Privilege privilege = privilegeMapper.mapToPrivilege(privilegeDto);
-
-        Privilege createdPrivilege = privilegeRepository.save(privilege);
-
-        PrivilegeDto createdPrivilegeDto = privilegeMapper.mapToPrivilegeDto(createdPrivilege);
-
-        return new ResponseEntity<>(createdPrivilegeDto, HttpStatus.CREATED);
+    public PrivilegeDto createNewPrivilege(PrivilegeDto privilegeDto) {
+        var privilege = privilegeMapper.mapToPrivilege(privilegeDto);
+        var createdPrivilege = privilegeRepository.save(privilege);
+        return privilegeMapper.mapToPrivilegeDto(createdPrivilege);
     }
 
     @LogExecutionTime
-    public ResponseEntity<PrivilegeDto> updatePrivilege(PrivilegeDto privilegeDto) {
-        Privilege privilege = privilegeRepository.findById(privilegeDto.getId()).orElse(null);
-        if (privilege == null) {
-            throw new NotFoundException(String.format("service.updatePrivilege id = %s", privilegeDto.getId()));
-        }
-
+    public PrivilegeDto updatePrivilege(PrivilegeDto privilegeDto) {
+        var privilege = privilegeRepository.findById(privilegeDto.getId()).orElseThrow(() -> new NotFoundException(String.format("service.updatePrivilege id = %s", privilegeDto.getId())));
         privilege.setName(privilegeDto.getName());
         privilege.setDescription(privilegeDto.getDescription());
-
         Privilege changedPrivilege = privilegeRepository.save(privilege);
-
-        PrivilegeDto changedPrivilegeDto = privilegeMapper.mapToPrivilegeDto(changedPrivilege);
-
-        return new ResponseEntity<>(changedPrivilegeDto, HttpStatus.OK);
+        return privilegeMapper.mapToPrivilegeDto(changedPrivilege);
     }
 
     @LogExecutionTime
-    public ResponseEntity deletePrivilege(String id) {
+    public void deletePrivilege(String id) {
         if (!privilegeRepository.existsById(id)) {
             throw new NotFoundException(String.format("service.deletePrivilege id = %s", id));
         }
-
         privilegeRepository.deleteById(id);
-
-        return new ResponseEntity(null, HttpStatus.OK);
     }
 }

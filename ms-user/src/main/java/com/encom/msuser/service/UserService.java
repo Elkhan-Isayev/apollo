@@ -4,12 +4,16 @@ import com.encom.msuser.configuration.annotation.LogExecutionTime;
 import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.exception.NotFoundException;
 import com.encom.msuser.mapper.GroupMapper;
+import com.encom.msuser.mapper.PrivilegeMapper;
 import com.encom.msuser.mapper.UserMapper;
 import com.encom.msuser.model.dto.GroupDto;
+import com.encom.msuser.model.dto.PrivilegeDto;
 import com.encom.msuser.model.dto.UserDto;
 import com.encom.msuser.model.entity.Group;
+import com.encom.msuser.model.entity.Privilege;
 import com.encom.msuser.model.entity.User;
 import com.encom.msuser.repository.GroupRepository;
+import com.encom.msuser.repository.PrivilegeRepository;
 import com.encom.msuser.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -24,9 +28,11 @@ import java.util.List;
 public class UserService {
     private final UserRepository userRepository;
     private final GroupRepository groupRepository;
+    private final PrivilegeRepository privilegeRepository;
 
     private final UserMapper userMapper = UserMapper.INSTANCE;
     private final GroupMapper groupMapper = GroupMapper.INSTANCE;
+    private final PrivilegeMapper privilegeMapper = PrivilegeMapper.INSTANCE;
 
     @LogExecutionTime
     public List<UserDto> getAllUsers(int page, int size) {
@@ -126,14 +132,59 @@ public class UserService {
                 .orElseThrow(() -> new BadRequestException(String.format("service.deleteUserGroup userId = %s", userId)));
         var group = groupRepository.findById(groupId)
                 .orElseThrow(() -> new BadRequestException(String.format("service.deleteUserGroup groupId = %s", groupId)));
-
         user.getGroups()
                 .stream()
                 .filter(perGroup -> perGroup == group)
                 .findAny()
                 .orElseThrow(() -> new NotFoundException(String.format("service.deleteUserGroup groupId = %s does not exist for userId = %s", groupId, userId)));
-
         user.getGroups().remove(group);
+        userRepository.save(user);
+    }
+
+    @LogExecutionTime
+    public List<PrivilegeDto> getUserPrivileges(String id) {
+        List<Privilege> privileges = userRepository.findById(id)
+                .orElseThrow(() -> new BadRequestException(String.format("service.getUserPrivileges id = %s user does not exist", id)))
+                .getPrivileges();
+        if (CollectionUtils.isEmpty(privileges)) {
+            throw new NotFoundException(String.format("service.getUserPrivileges id = %s, userPrivilege is empty", id));
+        }
+        return privilegeMapper.mapToPrivilegeDtoList(privileges);
+    }
+
+    @LogExecutionTime
+    public void addUserPrivilege(String userId, String privilegeId) {
+        var user = userRepository.findById(userId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.addUserPrivilege userId = %s", userId)));
+        var privilege = privilegeRepository.findById(privilegeId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.addUserPrivilege privilegeId = %s", privilegeId)));
+        user.getPrivileges()
+                .stream()
+                .filter(perPrivilege -> privilege == perPrivilege)
+                .findFirst()
+                .ifPresentOrElse(
+                        (presentPrivilege) -> {
+                            throw new BadRequestException(String.format("service.addUserPrivilege privilegeId = %s already exist for userId = %s", presentPrivilege.getId(), userId));
+                        },
+                        () -> {
+                            user.getPrivileges().add(privilege);
+                            userRepository.save(user);
+                        }
+                );
+    }
+
+    @LogExecutionTime
+    public void deleteUserPrivilege(String userId, String privilegeId) {
+        var user = userRepository.findById(userId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.deleteUserPrivilege userId = %s", userId)));
+        var privilege = privilegeRepository.findById(privilegeId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.deleteUserPrivilege privilegeId = %s", privilegeId)));
+        user.getPrivileges()
+                .stream()
+                .filter(perPrivilege -> perPrivilege == privilege)
+                .findAny()
+                .orElseThrow(() -> new NotFoundException(String.format("service.deleteUserPrivilege privilegeId = %s does not exist for userId = %s", privilegeId, userId)));
+        user.getGroups().remove(privilege);
         userRepository.save(user);
     }
 }

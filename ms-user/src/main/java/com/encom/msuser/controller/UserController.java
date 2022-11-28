@@ -2,6 +2,7 @@ package com.encom.msuser.controller;
 
 import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.model.dto.GroupDto;
+import com.encom.msuser.model.dto.PrivilegeDto;
 import com.encom.msuser.model.dto.UserDto;
 import com.encom.msuser.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -67,13 +68,15 @@ public class UserController {
         userService.deleteUser(id);
     }
 
+    //  User groups
+
     @GetMapping("/{id}/groups")
     public List<GroupDto> getUserGroups(@PathVariable @NotEmpty(message = "id can not be empty") String id) {
         return userService.getUserGroups(id);
     }
 
     @PostMapping("/{userId}/groups/{groupId}")
-    @ResponseStatus(value = HttpStatus.OK)
+    @ResponseStatus(value = HttpStatus.CREATED)
     public void addUserGroup(@PathVariable @NotEmpty(message = "id can not be empty") String userId,
                              @PathVariable @NotEmpty(message = "id can not be empty") String groupId) {
         userService.addUserGroup(userId, groupId);
@@ -83,5 +86,24 @@ public class UserController {
     public void deleteUserGroup(@PathVariable @NotEmpty(message = "id can not be empty") String userId,
                                 @PathVariable @NotEmpty(message = "id can not be empty") String groupId) {
         userService.deleteUserGroup(userId, groupId);
+    }
+
+    //  User privileges
+    @GetMapping("/{id}/privileges")
+    public List<PrivilegeDto> getUserPrivileges(@PathVariable @NotEmpty(message = "id can not be empty") String userId) {
+        return userService.getUserPrivileges(userId);
+    }
+
+    @PostMapping("/{userId}/privileges/{privilegeId}")
+    @ResponseStatus(value = HttpStatus.CREATED)
+    public void addUserPrivilege(@PathVariable @NotEmpty(message = "id can not be empty") String userId,
+                                 @PathVariable @NotEmpty(message = "id can not be empty") String privilegeId) {
+        userService.addUserPrivilege(userId, privilegeId);
+    }
+
+    @DeleteMapping("/{userId}/privileges/{privilegeId}")
+    public void deleteUserPrivilege(@PathVariable @NotEmpty(message = "id can not be empty") String userId,
+                                    @PathVariable @NotEmpty(message = "id can not be empty") String privilegeId) {
+        userService.deleteUserPrivilege(userId, privilegeId);
     }
 }

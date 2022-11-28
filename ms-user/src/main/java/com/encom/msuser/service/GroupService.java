@@ -1,17 +1,20 @@
 package com.encom.msuser.service;
 
 import com.encom.msuser.configuration.annotation.LogExecutionTime;
+import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.exception.NotFoundException;
 import com.encom.msuser.mapper.GroupMapper;
+import com.encom.msuser.mapper.PrivilegeMapper;
 import com.encom.msuser.model.dto.GroupDto;
+import com.encom.msuser.model.dto.PrivilegeDto;
 import com.encom.msuser.model.entity.Group;
+import com.encom.msuser.model.entity.Privilege;
 import com.encom.msuser.repository.GroupRepository;
+import com.encom.msuser.repository.PrivilegeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,77 +23,101 @@ import java.util.List;
 @RequiredArgsConstructor
 public class GroupService {
     private final GroupRepository groupRepository;
+    private final PrivilegeRepository privilegeRepository;
+
     private final GroupMapper groupMapper = GroupMapper.INSTANCE;
+    private final PrivilegeMapper privilegeMapper = PrivilegeMapper.INSTANCE;
 
     @LogExecutionTime
-    public ResponseEntity<List<GroupDto>> getAllGroups(int page, int size) {
+    public List<GroupDto> getAllGroups(int page, int size) {
         List<Group> groups = new ArrayList<>();
-
         groupRepository.findAll(PageRequest.of(page - 1, size)).forEach(groups::add);
         if (groups.isEmpty()) {
             throw new NotFoundException(String.format("service.getAllGroups page = %s and size = %s", page, size));
         }
-
-        List<GroupDto> groupDtoList = groupMapper.mapToGroupDtoList(groups);
-
-        return new ResponseEntity<>(groupDtoList, HttpStatus.OK);
+        return groupMapper.mapToGroupDtoList(groups);
     }
 
     @LogExecutionTime
-    public ResponseEntity<Long> getAllGroupsCount() {
+    public Long getAllGroupsCount() {
         long count = groupRepository.count();
-
-        return new ResponseEntity<>(count, HttpStatus.OK);
+        return count;
     }
 
     @LogExecutionTime
-    public ResponseEntity<GroupDto> getGroupById(String id) {
-        Group group = groupRepository.findById(id).orElse(null);
-        if (group == null) {
-            throw new NotFoundException(String.format("service.getGroupById id = %s", id));
-        }
-
-        GroupDto groupDto = groupMapper.mapToGroupDto(group);
-
-        return new ResponseEntity<>(groupDto, HttpStatus.OK);
+    public GroupDto getGroupById(String id) {
+        var group = groupRepository.findById(id).orElseThrow(() -> new NotFoundException(String.format("service.getGroupById id = %s", id)));
+        return groupMapper.mapToGroupDto(group);
     }
 
     @LogExecutionTime
-    public ResponseEntity<GroupDto> createNewGroup(GroupDto groupDto) {
-        Group group = groupMapper.mapToGroup(groupDto);
-
-        Group createdGroup = groupRepository.save(group);
-
-        GroupDto createdGroupDto = groupMapper.mapToGroupDto(createdGroup);
-
-        return new ResponseEntity<>(createdGroupDto, HttpStatus.CREATED);
+    public GroupDto createNewGroup(GroupDto groupDto) {
+        var group = groupMapper.mapToGroup(groupDto);
+        var createdGroup = groupRepository.save(group);
+        return groupMapper.mapToGroupDto(createdGroup);
     }
 
     @LogExecutionTime
-    public ResponseEntity<GroupDto> updateGroup(GroupDto groupDto) {
-        Group group = groupRepository.findById(groupDto.getId()).orElse(null);
-        if (group == null) {
-            throw new NotFoundException(String.format("service.updateGroup id = %s", groupDto.getId()));
-        }
-
+    public GroupDto updateGroup(GroupDto groupDto) {
+        var group = groupRepository.findById(groupDto.getId()).orElseThrow(() -> new NotFoundException(String.format("service.updateGroup id = %s", groupDto.getId())));
         group.setName(groupDto.getName());
         group.setDescription(groupDto.getDescription());
-
         Group changedGroup = groupRepository.save(group);
-
-        GroupDto changedGroupDto = groupMapper.mapToGroupDto(changedGroup);
-
-        return new ResponseEntity<>(changedGroupDto, HttpStatus.OK);
+        return groupMapper.mapToGroupDto(changedGroup);
     }
 
     @LogExecutionTime
-    public ResponseEntity deleteGroup(String id) {
+    public void deleteGroup(String id) {
         if (!groupRepository.existsById(id)) {
             throw new NotFoundException(String.format("service.deleteGroup id = %s", id));
         }
-
         groupRepository.deleteById(id);
+    }
 
-        return new ResponseEntity(null, HttpStatus.OK);
+    @LogExecutionTime
+    public List<PrivilegeDto> getGroupPrivileges(String groupId) {
+        List<Privilege> privileges = groupRepository.findById(groupId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.getGroupPrivileges id = %s group does not exist", groupId)))
+                .getPrivileges();
+        if(CollectionUtils.isEmpty(privileges)) {
+            throw new NotFoundException(String.format("service.getGroupPrivileges id = %s, groupPrivileges is empty", groupId));
+        }
+        return privilegeMapper.mapToPrivilegeDtoList(privileges);
+    }
+
+    @LogExecutionTime
+    public void addGroupPrivilege(String groupId, String privilegeId) {
+        var group = groupRepository.findById(groupId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.addGroupPrivilege groupId = %s", groupId)));
+        var privilege = privilegeRepository.findById(privilegeId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.addGroupPrivilege privilegeId = %s", privilegeId)));
+        group.getPrivileges()
+                .stream()
+                .filter(perPrivilege -> privilege == perPrivilege)
+                .findFirst()
+                .ifPresentOrElse(
+                        (presentPrivilege) -> {
+                            throw new BadRequestException(String.format("service.addGroupPrivilege privilegeId = %s already exist for groupId = %s", presentPrivilege.getId(), groupId));
+                        },
+                        () -> {
+                            group.getPrivileges().add(privilege);
+                            groupRepository.save(group);
+                        }
+                );
+    }
+
+    @LogExecutionTime
+    public void deleteGroupPrivilege(String groupId, String privilegeId) {
+        var group = groupRepository.findById(groupId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.deleteGroupPrivilege groupId = %s", groupId)));
+        var privilege = privilegeRepository.findById(privilegeId)
+                .orElseThrow(() -> new BadRequestException(String.format("service.deleteGroupPrivilege privilegeId = %s", privilegeId)));
+        group.getPrivileges()
+                .stream()
+                .filter(perPrivilege -> perPrivilege == privilege)
+                .findAny()
+                .orElseThrow(() -> new NotFoundException(String.format("service.deleteGroupPrivilege privilegeId = %s does not exist for groupId = %s", privilegeId, groupId)));
+        group.getPrivileges().remove(privilege);
+        groupRepository.save(group);
     }
 }

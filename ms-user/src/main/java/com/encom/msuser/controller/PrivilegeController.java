@@ -4,7 +4,7 @@ import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.model.dto.PrivilegeDto;
 import com.encom.msuser.service.PrivilegeService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -24,7 +26,7 @@ public class PrivilegeController {
     private final PrivilegeService privilegeService;
 
     @GetMapping
-    public ResponseEntity<List<PrivilegeDto>> getAllPrivileges(@RequestParam(value="page", defaultValue="1") int page,
+    public List<PrivilegeDto> getAllPrivileges(@RequestParam(value="page", defaultValue="1") int page,
                                                           @RequestParam(value="size", defaultValue="10") int size) {
         if (page <= 0 || size <= 0) {
             throw new BadRequestException(String.format("controller.getAllPrivileges page = %s size = %s", page, size));
@@ -33,42 +35,28 @@ public class PrivilegeController {
     }
 
     @GetMapping("/count")
-    public ResponseEntity<Long> getAllPrivilegesCount() {
+    public Long getAllPrivilegesCount() {
         return privilegeService.getAllPrivilegesCount();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PrivilegeDto> getPrivilegeById(@PathVariable String id) {
-        if (id.isEmpty()) {
-            throw new BadRequestException(String.format("controller.getPrivilegeById"));
-        }
+    public PrivilegeDto getPrivilegeById(@PathVariable @NotEmpty(message = "id can not be empty") String id) {
         return privilegeService.getPrivilegeById(id);
     }
 
     @PostMapping
-    public ResponseEntity<PrivilegeDto> createNewPrivilege(@RequestBody PrivilegeDto privilegeDto) {
-        if (privilegeDto == null ||
-                privilegeDto.getName().isEmpty() ||
-                privilegeDto.getDescription().isEmpty()) {
-            throw new BadRequestException(String.format("controller.createNewPrivilege body = %s", privilegeDto));
-        }
+    @ResponseStatus(code = HttpStatus.CREATED)
+    public PrivilegeDto createNewPrivilege(@RequestBody PrivilegeDto privilegeDto) {
         return privilegeService.createNewPrivilege(privilegeDto);
     }
 
     @PutMapping
-    public ResponseEntity<PrivilegeDto> updatePrivilege(@RequestBody PrivilegeDto privilegeDto) {
-        if (privilegeDto == null ||
-                privilegeDto.getId().isEmpty()) {
-            throw new BadRequestException(String.format("controller.updatePrivilege body = %s", privilegeDto));
-        }
+    public PrivilegeDto updatePrivilege(@RequestBody PrivilegeDto privilegeDto) {
         return privilegeService.updatePrivilege(privilegeDto);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<PrivilegeDto> deletePrivilege(@PathVariable String id) {
-        if (id.isEmpty()) {
-            throw new BadRequestException(String.format("controller.deletePrivilege"));
-        }
-        return privilegeService.deletePrivilege(id);
+    public void deletePrivilege(@PathVariable @NotEmpty(message = "id can not be empty") String id) {
+        privilegeService.deletePrivilege(id);
     }
 }
