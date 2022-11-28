@@ -2,11 +2,11 @@ package com.encom.msuser.controller;
 
 import com.encom.msuser.exception.BadRequestException;
 import com.encom.msuser.model.dto.GroupDto;
+import com.encom.msuser.model.dto.PrivilegeDto;
 import com.encom.msuser.model.dto.UserDto;
-import com.encom.msuser.service.UserService;;
+import com.encom.msuser.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.web.servlet.error.ErrorController;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,8 +15,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -26,41 +29,33 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public ResponseEntity<List<UserDto>> getAllUsers(@RequestParam(value="page", defaultValue="1") int page,
+    public List<UserDto> getAllUsers(@RequestParam(value="page", defaultValue="1") int page,
                                                      @RequestParam(value="size", defaultValue="10") int size) {
         if (page <= 0 || size <= 0) {
             throw new BadRequestException(String.format("controller.getAllUsers page = %s size = %s", page, size));
         }
+
         return userService.getAllUsers(page, size);
     }
 
     @GetMapping("/count")
-    public ResponseEntity<Long> getAllUsersCount() {
+    public Long getAllUsersCount() {
         return userService.getAllUsersCount();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDto> getUserById(@PathVariable String id) {
-        if (id.isEmpty()) {
-            throw new BadRequestException(String.format("controller.getUserById"));
-        }
+    public UserDto getUserById(@PathVariable @NotEmpty(message = "id can not be empty") String id) {
         return userService.getUserById(id);
     }
 
     @PostMapping
-    public ResponseEntity<UserDto> createNewUser(@RequestBody UserDto userDto) {
-        if (userDto == null ||
-                userDto.getUsername().isEmpty() ||
-                userDto.getName().isEmpty() ||
-                userDto.getSurname().isEmpty() ||
-                userDto.getEmail().isEmpty()) {
-            throw new BadRequestException(String.format("controller.createNewUser body = %s", userDto));
-        }
+    @ResponseStatus(code = HttpStatus.CREATED)
+    public UserDto createNewUser(@RequestBody @Valid UserDto userDto) {
         return userService.createNewUser(userDto);
     }
 
     @PutMapping
-    public ResponseEntity<UserDto> updateUser(@RequestBody UserDto userDto) {
+    public UserDto updateUser(@RequestBody UserDto userDto) {
         if (userDto == null ||
                 userDto.getId().isEmpty()) {
             throw new BadRequestException(String.format("controller.updateUser body = %s", userDto));
@@ -69,28 +64,46 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<UserDto> deleteUser(@PathVariable String id) {
-        if (id.isEmpty()) {
-            throw new BadRequestException(String.format("controller.deleteUser"));
-        }
-        return userService.deleteUser(id);
+    public void deleteUser(@PathVariable @NotEmpty(message = "id can not be empty") String id) {
+        userService.deleteUser(id);
     }
 
+    //  User groups
+
     @GetMapping("/{id}/groups")
-    public ResponseEntity<List<GroupDto>> getUserGroups(@PathVariable String id) {
-        if (id.isEmpty()) {
-            throw new BadRequestException(String.format("controller.getUserGroups"));
-        }
+    public List<GroupDto> getUserGroups(@PathVariable @NotEmpty(message = "id can not be empty") String id) {
         return userService.getUserGroups(id);
     }
 
-    @PostMapping("/{id}/groups")
-    public ResponseEntity addUserGroup(@PathVariable String id, @RequestBody GroupDto groupDto) {
-        if (id.isEmpty() ||
-                groupDto == null ||
-                groupDto.getId().isEmpty()) {
-            throw new BadRequestException(String.format("controller.addUserGroup"));
-        }
-        return userService.addUserGroup(id, groupDto);
+    @PostMapping("/{userId}/groups/{groupId}")
+    @ResponseStatus(value = HttpStatus.CREATED)
+    public void addUserGroup(@PathVariable @NotEmpty(message = "id can not be empty") String userId,
+                             @PathVariable @NotEmpty(message = "id can not be empty") String groupId) {
+        userService.addUserGroup(userId, groupId);
+    }
+
+    @DeleteMapping("/{userId}/groups/{groupId}")
+    public void deleteUserGroup(@PathVariable @NotEmpty(message = "id can not be empty") String userId,
+                                @PathVariable @NotEmpty(message = "id can not be empty") String groupId) {
+        userService.deleteUserGroup(userId, groupId);
+    }
+
+    //  User privileges
+    @GetMapping("/{id}/privileges")
+    public List<PrivilegeDto> getUserPrivileges(@PathVariable @NotEmpty(message = "id can not be empty") String userId) {
+        return userService.getUserPrivileges(userId);
+    }
+
+    @PostMapping("/{userId}/privileges/{privilegeId}")
+    @ResponseStatus(value = HttpStatus.CREATED)
+    public void addUserPrivilege(@PathVariable @NotEmpty(message = "id can not be empty") String userId,
+                                 @PathVariable @NotEmpty(message = "id can not be empty") String privilegeId) {
+        userService.addUserPrivilege(userId, privilegeId);
+    }
+
+    @DeleteMapping("/{userId}/privileges/{privilegeId}")
+    public void deleteUserPrivilege(@PathVariable @NotEmpty(message = "id can not be empty") String userId,
+                                    @PathVariable @NotEmpty(message = "id can not be empty") String privilegeId) {
+        userService.deleteUserPrivilege(userId, privilegeId);
     }
 }

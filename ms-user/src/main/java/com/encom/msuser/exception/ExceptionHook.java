@@ -1,5 +1,6 @@
 package com.encom.msuser.exception;
 
+import com.encom.msuser.configuration.annotation.LogExecutionTime;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.extern.slf4j.Slf4j;
 
@@ -42,6 +43,23 @@ public class ExceptionHook extends DefaultErrorAttributes {
         return ofType(request, HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
     }
 
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<Map<String, Object>> handleValidationExceptions(
+            MethodArgumentNotValidException exception,
+            WebRequest request) {
+        log.error("Validation exception: {}", exception.getStackTrace());
+
+        Map<String, String> errors = new HashMap<>();
+        exception.getBindingResult().getAllErrors().forEach((error) -> {
+            String fieldName = ((FieldError) error).getField();
+            String errorMessage = error.getDefaultMessage();
+            errors.put(fieldName, errorMessage);
+        });
+        return ofType(request, HttpStatus.BAD_REQUEST, errors.toString());
+    }
+
+    //  Custom exceptions
+
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<Map<String, Object>> handle(NotFoundException exception,
                                                       WebRequest request) {
@@ -61,21 +79,6 @@ public class ExceptionHook extends DefaultErrorAttributes {
                                                       WebRequest request) {
         log.info("Error validating access token: {}", exception.getMessage());
         return ofType(request, HttpStatus.UNAUTHORIZED, exception.getMessage());
-    }
-
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, Object>> handleValidationExceptions(
-            MethodArgumentNotValidException exception,
-            WebRequest request) {
-        log.error("Validation exception: {}", exception.getMessage());
-
-        Map<String, String> errors = new HashMap<>();
-        exception.getBindingResult().getAllErrors().forEach((error) -> {
-            String fieldName = ((FieldError) error).getField();
-            String errorMessage = error.getDefaultMessage();
-            errors.put(fieldName, errorMessage);
-        });
-        return ofType(request, HttpStatus.BAD_REQUEST, errors.toString());
     }
 
     protected ResponseEntity<Map<String, Object>> ofType(WebRequest request, HttpStatus status, String message) {
